@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="HardPoints">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="HardPoint" maxOccurs="unbounded" minOccurs="0">
+          <xsd:complexType>
+            <xsd:choice maxOccurs="unbounded" minOccurs="0">
+              <xsd:element type="xsd:string" name="Type"/>
+              <xsd:element type="xsd:string" name="Is_Targetable"/>
+              <xsd:element type="xsd:string" name="Is_Destroyable"/>
+              <xsd:element type="xsd:string" name="Tooltip_Text"/>
+              <xsd:element type="xsd:float" name="Health"/>
+              <xsd:element type="xsd:string" name="Death_Explosion_Particles"/>
+              <xsd:element type="xsd:string" name="Death_Explosion_SFXEvent"/>
+              <xsd:element type="xsd:string" name="Damage_Type"/>
+              <xsd:element type="xsd:string" name="Model_To_Attach"/>
+              <xsd:element type="xsd:string" name="Attachment_Bone"/>
+              <xsd:element type="xsd:string" name="Collision_Mesh"/>
+              <xsd:element type="xsd:string" name="Damage_Decal"/>
+              <xsd:element type="xsd:string" name="Damage_Particles"/>
+              <xsd:element type="xsd:string" name="Death_Breakoff_Prop"/>
+              <xsd:element type="xsd:string" name="Fire_Bone_A"/>
+              <xsd:element type="xsd:string" name="Fire_Bone_B"/>
+              <xsd:element type="xsd:float" name="Fire_Cone_Width"/>
+              <xsd:element type="xsd:float" name="Fire_Cone_Height"/>
+              <xsd:element type="xsd:string" name="Fire_Projectile_Type"/>
+              <xsd:element type="xsd:float" name="Fire_Min_Recharge_Seconds"/>
+              <xsd:element type="xsd:float" name="Fire_Max_Recharge_Seconds"/>
+              <xsd:element type="xsd:byte" name="Fire_Pulse_Count"/>
+              <xsd:element type="xsd:float" name="Fire_Pulse_Delay_Seconds"/>
+              <xsd:element type="xsd:float" name="Fire_Range_Distance"/>
+              <xsd:element type="xsd:string" name="Fire_SFXEvent"/>
+              <xsd:element type="xsd:string" name="Fire_Inaccuracy_Distance"/>
+              <xsd:element type="xsd:string" name="Engine_Particles"/>
+              <xsd:element type="xsd:float" name="Projectile_Damage"/>
+              <xsd:element type="xsd:string" name="Allow_Opportunity_Fire_When_Targeting"/>
+              <xsd:element type="xsd:string" name="Fire_Category_Restrictions"/>
+              <xsd:element type="xsd:float" name="Repair_Cost_Per_Frame"/>
+              <xsd:element type="xsd:float" name="Repair_Amount_Per_Frame"/>
+              <xsd:element type="xsd:float" name="Fighter_Bay_Flyout_Distance"/>
+              <xsd:element type="xsd:string" name="Special_Ability_Name"/>
+              <xsd:element type="xsd:string" name="Fire_Bone_C"/>
+              <xsd:element type="xsd:string" name="Fire_Bone_D"/>
+              <xsd:element type="xsd:string" name="Allow_Opportunity_Fire_When_Idle"/>
+              <xsd:element type="xsd:string" name="Fire_When_In_Rocket_Attack_Mode"/>
+              <xsd:element type="xsd:string" name="Fire_When_In_Normal_Attack_Mode"/>
+              <xsd:element type="xsd:string" name="Fire_When_Deployed"/>
+              <xsd:element type="xsd:string" name="Fire_When_Undeployed"/>
+            </xsd:choice>
+            <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="TradeRoutes">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="TradeRoute" maxOccurs="unbounded" minOccurs="0">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element type="xsd:string" name="Point_A"/>
+              <xsd:element type="xsd:string" name="Point_B"/>
+              <xsd:element type="xsd:float" name="HS_Speed_Factor"/>
+              <xsd:element type="xsd:byte" name="Political_Control_Gain"/>
+              <xsd:element type="xsd:float" name="Credit_Gain_Factor"/>
+              <xsd:element type="xsd:string" name="Visible_Line_Name" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

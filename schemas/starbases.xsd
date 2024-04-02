@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="StarBases">
+    <xsd:complexType>
+      <xsd:choice maxOccurs="unbounded" minOccurs="0">
+        <xsd:element name="StarBase" maxOccurs="unbounded" minOccurs="0">
+          <xsd:complexType>
+            <xsd:choice maxOccurs="unbounded" minOccurs="0">
+              <xsd:element type="xsd:float" name="GUI_Bounds_Scale"/>
+              <xsd:element type="xsd:string" name="Text_ID"/>
+              <xsd:element type="xsd:string" name="Encyclopedia_Text"/>
+              <xsd:element type="xsd:string" name="Encyclopedia_Unit_Class"/>
+              <xsd:element type="xsd:float" name="GUI_Row"/>
+              <xsd:element type="xsd:string" name="Space_Model_Name"/>
+              <xsd:element type="xsd:string" name="Galactic_Model_Name"/>
+              <xsd:element type="xsd:short" name="Select_Box_Scale"/>
+              <xsd:element type="xsd:byte" name="Select_Box_Z_Adjust"/>
+              <xsd:element type="xsd:string" name="Is_Dummy"/>
+              <xsd:element type="xsd:string" name="Affiliation"/>
+              <xsd:element type="xsd:short" name="Build_Cost_Credits"/>
+              <xsd:element type="xsd:int" name="AI_Combat_Power"/>
+              <xsd:element type="xsd:short" name="Build_Time_Seconds"/>
+              <xsd:element type="xsd:string" name="Build_Tab_Space_Station"/>
+              <xsd:element type="xsd:byte" name="Size_Value"/>
+              <xsd:element type="xsd:byte" name="Tech_Level"/>
+              <xsd:element type="xsd:byte" name="Base_Level"/>
+              <xsd:element type="xsd:string" name="Prev_Level_Base"/>
+              <xsd:element type="xsd:string" name="Next_Level_Base"/>
+              <xsd:element type="xsd:byte" name="Required_Ground_Base_Level"/>
+              <xsd:element type="xsd:byte" name="Required_Star_Base_Level"/>
+              <xsd:element type="xsd:string" name="CategoryMask"/>
+              <xsd:element type="xsd:string" name="Behavior"/>
+              <xsd:element type="xsd:string" name="SpaceBehavior"/>
+              <xsd:element type="xsd:string" name="Multisample_FOW_Check"/>
+              <xsd:element type="xsd:string" name="Reinforcement_Prevention_Radius"/>
+              <xsd:element type="xsd:string" name="Armor_Type"/>
+              <xsd:element type="xsd:string" name="Shield_Armor_Type"/>
+              <xsd:element type="xsd:string" name="Build_Initially_Locked"/>
+              <xsd:element type="xsd:string" name="Build_Can_Be_Unlocked_By_Slicer"/>
+              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_0"/>
+              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_0"/>
+              <xsd:element type="xsd:byte" name="Spawned_Squadron_Delay_Seconds"/>
+              <xsd:element type="xsd:string" name="Tactical_Buildable_Objects_Campaign"/>
+              <xsd:element type="xsd:short" name="Autoresolve_Health"/>
+              <xsd:element type="xsd:byte" name="Damage"/>
+              <xsd:element type="xsd:short" name="Shield_Points"/>
+              <xsd:element type="xsd:short" name="Tactical_Health"/>
+              <xsd:element type="xsd:short" name="Shield_Refresh_Rate"/>
+              <xsd:element type="xsd:short" name="Energy_Capacity"/>
+              <xsd:element type="xsd:short" name="Energy_Refresh_Rate"/>
+              <xsd:element type="xsd:string" name="Collidable_By_Projectile_Living"/>
+              <xsd:element type="xsd:string" name="Death_Explosions"/>
+              <xsd:element type="xsd:float" name="Dense_FOW_Reveal_Range_Multiplier"/>
+              <xsd:element type="xsd:float" name="Space_FOW_Reveal_Range"/>
+              <xsd:element type="xsd:float" name="Targeting_Max_Attack_Distance"/>
+              <xsd:element type="xsd:string" name="HardPoints"/>
+              <xsd:element type="xsd:string" name="GUI_Model_Name"/>
+              <xsd:element type="xsd:short" name="GUI_Distance"/>
+              <xsd:element type="xsd:string" name="GUI_Offset"/>
+              <xsd:element type="xsd:string" name="GUI_Angles"/>
+              <xsd:element type="xsd:byte" name="GUI_Velocity"/>
+              <xsd:element type="xsd:byte" name="GUI_X_Rot"/>
+              <xsd:element type="xsd:string" name="Victory_Relevant"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Build_Started"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Build_Cancelled"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Build_Complete"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Ambient_Loop"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Fire"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Select"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Attack"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Barrage"/>
+              <xsd:element type="xsd:string" name="Death_SFXEvent_Start_Die"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Attack_Hardpoint"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Hardpoint_All_Weapons_Destroyed"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Hardpoint_Destroyed"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Unit_Under_Attack"/>
+              <xsd:element type="xsd:string" name="Has_Space_Evaluator"/>
+              <xsd:element type="xsd:float" name="Custom_Soft_Footprint_Radius"/>
+              <xsd:element type="xsd:string" name="Space_Obstacle_Offset"/>
+              <xsd:element type="xsd:string" name="Space_Layer"/>
+              <xsd:element type="xsd:string" name="Is_Visible_On_Radar"/>
+              <xsd:element type="xsd:string" name="Visible_On_Radar_When_Fogged"/>
+              <xsd:element type="xsd:string" name="Radar_Icon_Size"/>
+              <xsd:element type="xsd:string" name="Radar_Icon_Name"/>
+              <xsd:element type="xsd:string" name="Icon_Name"/>
+              <xsd:element type="xsd:float" name="Score_Cost_Credits"/>
+              <xsd:element type="xsd:string" name="Retreat_Self_Destruct_Explosion"/>
+              <xsd:element type="xsd:string" name="Death_Clone"/>
+              <xsd:element type="xsd:byte" name="Additional_Population_Capacity"/>
+              <xsd:element type="xsd:float" name="Layer_Z_Adjust"/>
+              <xsd:element type="xsd:float" name="Death_Persistence_Duration"/>
+              <xsd:element type="xsd:string" name="Should_Death_Clone_Play_Idle"/>
+              <xsd:element type="xsd:short" name="Slice_Cost_Credits"/>
+              <xsd:element type="xsd:string" name="Radar_Rotate_Icon"/>
+              <xsd:element type="xsd:float" name="Radar_Icon_Scale_Land"/>
+              <xsd:element type="xsd:float" name="Radar_Icon_Scale_Space"/>
+              <xsd:element type="xsd:string" name="Available_In_Skirmish"/>
+              <xsd:element type="xsd:string" name="Variant_Of_Existing_Type"/>
+            </xsd:choice>
+            <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Starbase">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element type="xsd:string" name="Variant_Of_Existing_Type" minOccurs="0"/>
+              <xsd:element type="xsd:string" name="Behavior" minOccurs="0"/>
+              <xsd:element type="xsd:string" name="Build_Initially_Locked" minOccurs="0"/>
+              <xsd:element type="xsd:string" name="Build_Can_Be_Unlocked_By_Slicer" minOccurs="0"/>
+              <xsd:element type="xsd:string" name="Text_ID"/>
+              <xsd:element type="xsd:string" name="Space_Model_Name"/>
+              <xsd:element type="xsd:string" name="Death_SFXEvent_Start_Die"/>
+              <xsd:element type="xsd:float" name="Layer_Z_Adjust"/>
+              <xsd:element type="xsd:string" name="CategoryMask"/>
+              <xsd:element type="xsd:float" name="Death_Persistence_Duration"/>
+              <xsd:element type="xsd:string" name="Should_Death_Clone_Play_Idle"/>
+            </xsd:sequence>
+            <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:choice>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

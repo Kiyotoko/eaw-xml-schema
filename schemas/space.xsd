@@ -3,7 +3,7 @@
   Some content of this schema was added with the help of the Beginner's Modding Guide (PC) by RC1162. You can check out the guide at https://gamefaqs.gamespot.com/pc/925180-star-wars-empire-at-war/faqs/45886.
 -->
 <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <xsd:element name="UnitData">
+  <xsd:element name="SpaceUnits">
     <xsd:complexType>
       <xsd:sequence>
         <xsd:element name="SpaceUnit" maxOccurs="unbounded" minOccurs="1">

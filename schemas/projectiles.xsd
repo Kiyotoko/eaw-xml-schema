@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="Projectiles">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Projectile" maxOccurs="unbounded" minOccurs="0">
+          <xsd:complexType>
+            <xsd:choice maxOccurs="unbounded" minOccurs="0">
+              <xsd:element type="xsd:byte" name="Projectile_Custom_Render"/>
+              <xsd:element type="xsd:float" name="Projectile_Width"/>
+              <xsd:element type="xsd:float" name="Projectile_Length"/>
+              <xsd:element type="xsd:float" name="Scale_Factor"/>
+              <xsd:element type="xsd:float" name="Max_Speed"/>
+              <xsd:element type="xsd:float" name="Max_Rate_Of_Turn"/>
+              <xsd:element type="xsd:string" name="Behavior"/>
+              <xsd:element type="xsd:string" name="Projectile_Category"/>
+              <xsd:element type="xsd:float" name="Projectile_Max_Flight_Distance"/>
+              <xsd:element type="xsd:string" name="Projectile_Does_Shield_Damage"/>
+              <xsd:element type="xsd:string" name="Projectile_Does_Energy_Damage">
+                <xsd:annotation>
+                  <xsd:documentation>Knocks shields down.</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Projectile_Does_Hitpoint_Damage"/>
+              <xsd:element type="xsd:string" name="Projectile_Object_Detonation_Particle"/>
+              <xsd:element type="xsd:string" name="Projectile_Object_Armor_Reduced_Detonation_Particle"/>
+              <xsd:element type="xsd:string" name="Projectile_Ground_Detonation_Particle"/>
+              <xsd:element type="xsd:string" name="Projectile_Lifetime_Detonation_Particle"/>
+              <xsd:element type="xsd:string" name="Projectile_Absorbed_By_Shields_Particle"/>
+              <xsd:element type="xsd:string" name="Projectile_Ground_Detonation_SurfaceFX"/>
+              <xsd:element type="xsd:string" name="Projectile_SFXEvent_Detonate_Reduced_By_Armor"/>
+              <xsd:element type="xsd:string" name="Variant_Of_Existing_Type"/>
+              <xsd:element type="xsd:string" name="Space_Model_Name"/>
+              <xsd:element type="xsd:string" name="Projectile_Texture_Slot"/>
+              <xsd:element type="xsd:float" name="Projectile_Damage"/>
+              <xsd:element type="xsd:float" name="Projectile_Energy_Per_Shot"/>
+              <xsd:element type="xsd:int" name="AI_Combat_Power"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Fire"/>
+              <xsd:element type="xsd:string" name="Projectile_SFXEvent_Detonate"/>
+              <xsd:element type="xsd:string" name="Projectile_Ion_Stun_On_Detonation">
+                <xsd:annotation>
+                  <xsd:documentation>Stuns units on detonation.</xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Projectile_Disables_Engines_When_Power_Drained"/>
+              <xsd:element type="xsd:float" name="Projectile_Ion_Stun_Duration"/>
+              <xsd:element type="xsd:string" name="Projectile_Ion_Stun_Speed_Reduction_Percent"/>
+              <xsd:element type="xsd:float" name="Projectile_Ion_Stun_Shot_Rate_Reduction_Percent"/>
+              <xsd:element type="xsd:string" name="Projectile_Ion_Stun_Stack_Duration"/>
+              <xsd:element type="xsd:string" name="Projectile_Stun_On_Detonation"/>
+              <xsd:element type="xsd:short" name="Projectile_Stun_Duration_Frames"/>
+              <xsd:element type="xsd:short" name="Projectile_Stun_Radius"/>
+              <xsd:element type="xsd:string" name="Projectile_Stun_Spawn_Effect"/>
+              <xsd:element type="xsd:string" name="Projectile_Stun_Victims_Category_Mask"/>
+              <xsd:element type="xsd:string" name="Damage_Type"/>
+              <xsd:element type="xsd:string" name="Projectile_Laser_Color"/>
+              <xsd:element type="xsd:float" name="Projectile_Disable_Engines_Duration"/>
+              <xsd:element type="xsd:float" name="Projectile_Max_Scan_Range"/>
+              <xsd:element type="xsd:short" name="Projectile_Rocket_Curve_Distance"/>
+              <xsd:element type="xsd:byte" name="Projectile_Rocket_Curve_Offset"/>
+              <xsd:element type="xsd:short" name="Projectile_Rocket_Straight_Distance"/>
+              <xsd:element type="xsd:string" name="Explode_When_Reached_Target_Radius"/>
+              <xsd:element type="xsd:string" name="Projectile_Blast_Area_Dropoff"/>
+              <xsd:element type="xsd:byte" name="Projectile_Blast_Area_Dropoff_Tiers"/>
+              <xsd:element type="xsd:float" name="Projectile_Blast_Area_Damage"/>
+              <xsd:element type="xsd:float" name="Projectile_Blast_Area_Range"/>
+              <xsd:element type="xsd:string" name="Land_Model_Name"/>
+              <xsd:element type="xsd:string" name="Projectile_Target_Point_On_Terrain"/>
+              <xsd:element type="xsd:string" name="Projectile_Stun_Victims_Unit_Types"/>
+              <xsd:element type="xsd:string" name="Projectile_Instant_Heal_On_Detonation"/>
+              <xsd:element type="xsd:float" name="Projectile_Instant_Heal_Duration_Frames"/>
+              <xsd:element type="xsd:float" name="Projectile_Instant_Heal_Radius"/>
+              <xsd:element type="xsd:string" name="Projectile_Instant_Heal_Spawn_Effect"/>
+              <xsd:element type="xsd:string" name="Projectile_Instant_Heal_Targets_Category_Mask"/>
+              <xsd:element type="xsd:float" name="Projectile_Instant_Heal_Health_Increase"/>
+              <xsd:element type="xsd:string" name="Projectile_Cause_Invulnerability_On_Detonation"/>
+              <xsd:element type="xsd:float" name="Projectile_Cause_Invulnerability_Duration_Frames"/>
+              <xsd:element type="xsd:float" name="Projectile_Cause_Invulnerability_Radius"/>
+              <xsd:element type="xsd:float" name="Projectile_Cause_Invulnerability_Max_Targets"/>
+              <xsd:element type="xsd:string" name="Projectile_Cause_Invulnerability_Spawn_Effect"/>
+              <xsd:element type="xsd:string" name="Projectile_Cause_Invulnerability_Targets_Category_Mask"/>
+              <xsd:element type="xsd:float" name="Projectile_Convert_Enemy_Radius"/>
+              <xsd:element type="xsd:string" name="Projectile_Convert_Enemy_Spawn_Effect"/>
+              <xsd:element type="xsd:string" name="Projectile_Convert_Enemy_Targets_Category_Mask"/>
+              <xsd:element type="xsd:float" name="Land_FOW_Reveal_Range"/>
+              <xsd:element type="xsd:float" name="Dense_FOW_Reveal_Range_Multiplier"/>
+              <xsd:element type="xsd:string" name="Model_Visible_To_Enemy"/>
+              <xsd:element type="xsd:float" name="Space_FOW_Reveal_Range"/>
+              <xsd:element type="xsd:float" name="Projectile_Grenade_Gravity"/>
+              <xsd:element type="xsd:float" name="Projectile_Grenade_Gravity_Lob_Mod"/>
+              <xsd:element type="xsd:string" name="Projectile_Grenade_Can_Lob_Slower"/>
+              <xsd:element type="xsd:string" name="Loop_Idle_Anim_00"/>
+              <xsd:element type="xsd:string" name="Death_SFXEvent_Start_Die"/>
+              <xsd:element type="xsd:float" name="Projectile_Max_Lifetime"/>
+              <xsd:element type="xsd:string" name="Projectile_Damages_Random_Hard_Points"/>
+              <xsd:element type="xsd:float" name="Projectile_Acceleration_Per_Frame"/>
+              <xsd:element type="xsd:float" name="Projectile_Bomb_Fall_Accel_Rate"/>
+              <xsd:element type="xsd:string" name="Projectile_Grenade_Sticks_On_Collision"/>
+              <xsd:element type="xsd:string" name="Death_Explosions"/>
+              <xsd:element type="xsd:string" name="Projectile_Blast_Area_Immune_Faction"/>
+              <xsd:element type="xsd:float" name="Projectile_Damage_Delay_Secs"/>
+              <xsd:element type="xsd:float" name="Projectile_Block_Chance_Modifier"/>
+              <xsd:element type="xsd:float" name="Projectile_Redirect_Chance_Modifier"/>
+              <xsd:element type="xsd:string" name="Internal_Damage_Type"/>
+              <xsd:element type="xsd:string" name="Projectile_Weaken_Enemy_On_Detonation"/>
+              <xsd:element type="xsd:float" name="Projectile_Weaken_Enemy_Duration_Seconds"/>
+              <xsd:element type="xsd:short" name="Projectile_Weaken_Enemy_Radius"/>
+              <xsd:element type="xsd:string" name="Projectile_Weaken_Enemy_Spawn_Effect"/>
+              <xsd:element type="xsd:byte" name="Projectile_Weaken_Enemy_Take_Damage_Increase_Percent"/>
+              <xsd:element type="xsd:float" name="Projectile_Weaken_Enemy_Cause_Damage_Reduction_Percent"/>
+              <xsd:element type="xsd:string" name="Projectile_Weaken_Enemy_Targets_Category_Mask"/>
+            </xsd:choice>
+            <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+            <xsd:attribute type="xsd:string" name="Description" use="optional"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="GroundUnits">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="GroundVehicle" maxOccurs="unbounded" minOccurs="0">
+          <xsd:complexType>
+            <xsd:choice maxOccurs="unbounded" minOccurs="0">
+              <xsd:element type="xsd:byte" name="Blob_Shadow_Below_Detail_Level"/>
+              <xsd:element type="xsd:string" name="Blob_Shadow_Scale"/>
+              <xsd:element type="xsd:string" name="Blob_Shadow_Material_Name"/>
+              <xsd:element type="xsd:string" name="Text_ID"/>
+              <xsd:element type="xsd:string" name="Encyclopedia_Good_Against"/>
+              <xsd:element type="xsd:string" name="Encyclopedia_Vulnerable_To"/>
+              <xsd:element type="xsd:string" name="Encyclopedia_Text"/>
+              <xsd:element type="xsd:string" name="Encyclopedia_Unit_Class"/>
+              <xsd:element type="xsd:string" name="Land_Model_Name"/>
+              <xsd:element type="xsd:string" name="Icon_Name"/>
+              <xsd:element type="xsd:string" name="Behavior"/>
+              <xsd:element type="xsd:string" name="LandBehavior"/>
+              <xsd:element type="xsd:byte" name="Ranking_In_Category"/>
+              <xsd:element type="xsd:string" name="Cache_Crusher_Boxes"/>
+              <xsd:element type="xsd:string" name="Is_Supercrusher"/>
+              <xsd:element type="xsd:string" name="Property_Flags"/>
+              <xsd:element type="xsd:float" name="Autoresolve_Health"/>
+              <xsd:element type="xsd:string" name="Collidable_By_Projectile_Living"/>
+              <xsd:element type="xsd:string" name="Collidable_By_Projectile_Dead"/>
+              <xsd:element type="xsd:float" name="Mass"/>
+              <xsd:element type="xsd:string" name="Locomotor_Has_Animation_Priority"/>
+              <xsd:element type="xsd:string" name="Attack_Animation_Is_Overlay"/>
+              <xsd:element type="xsd:string" name="Projectile_Appearance_Delay_Frames"/>
+              <xsd:element type="xsd:float" name="Scale_Factor"/>
+              <xsd:element type="xsd:float" name="Movement_Animation_Speed"/>
+              <xsd:element type="xsd:float" name="Rotation_Animation_Speed"/>
+              <xsd:element type="xsd:float" name="Max_Speed"/>
+              <xsd:element type="xsd:float" name="Max_Rate_Of_Turn"/>
+              <xsd:element type="xsd:float" name="Stopped_Rate_Of_Turn"/>
+              <xsd:element type="xsd:string" name="Walk_Transition"/>
+              <xsd:element type="xsd:string" name="Has_Pre_Turn_Anim"/>
+              <xsd:element type="xsd:float" name="Min_Speed_Fraction_For_Turn"/>
+              <xsd:element type="xsd:string" name="Space_Layer"/>
+              <xsd:element type="xsd:string" name="UnitCollisionClass"/>
+              <xsd:element type="xsd:float" name="Custom_Hard_XExtent"/>
+              <xsd:element type="xsd:float" name="Custom_Hard_YExtent"/>
+              <xsd:element type="xsd:string" name="FormationGrouping"/>
+              <xsd:element type="xsd:float" name="MinimumPushReturnDistance"/>
+              <xsd:element type="xsd:float" name="MovementPredictionInterval"/>
+              <xsd:element type="xsd:float" name="MovementBoxExpansionFactor"/>
+              <xsd:element type="xsd:string" name="Land_Damage_Thresholds"/>
+              <xsd:element type="xsd:string" name="Land_Damage_Alternates"/>
+              <xsd:element type="xsd:string" name="Land_Damage_SFX"/>
+              <xsd:element type="xsd:string" name="Type"/>
+              <xsd:element type="xsd:string" name="Deploys"/>
+              <xsd:element type="xsd:string" name="Auto_Deploys"/>
+              <xsd:element type="xsd:string" name="Affiliation"/>
+              <xsd:element type="xsd:byte" name="Political_Control"/>
+              <xsd:element type="xsd:short" name="Size_Value"/>
+              <xsd:element type="xsd:string" name="Armor_Type"/>
+              <xsd:element type="xsd:byte" name="Damage"/>
+              <xsd:element type="xsd:short" name="Tactical_Health"/>
+              <xsd:element type="xsd:short" name="Energy_Capacity"/>
+              <xsd:element type="xsd:short" name="Energy_Refresh_Rate"/>
+              <xsd:element type="xsd:float" name="Land_FOW_Reveal_Range"/>
+              <xsd:element type="xsd:string" name="Targeting_Max_Attack_Distance"/>
+              <xsd:element type="xsd:float" name="Targeting_Min_Attack_Distance"/>
+              <xsd:element type="xsd:string" name="Target_Bones"/>
+              <xsd:element type="xsd:float" name="Turret_Targets_Ground_Vehicles"/>
+              <xsd:element type="xsd:float" name="Turret_Targets_Ground_Infantry"/>
+              <xsd:element type="xsd:float" name="Turret_Targets_Air_Vehicles"/>
+              <xsd:element type="xsd:float" name="Turret_Targets_Anything_Else"/>
+              <xsd:element type="xsd:float" name="Turret_Rotate_Extent_Degrees"/>
+              <xsd:element type="xsd:float" name="Turret_Elevate_Extent_Degrees"/>
+              <xsd:element type="xsd:string" name="Turret_Bone_Name"/>
+              <xsd:element type="xsd:float" name="Turret_Rotate_Speed"/>
+              <xsd:element type="xsd:byte" name="Apply_Z_Turret_Rotate_To_Axis"/>
+              <xsd:element type="xsd:byte" name="Apply_Y_Turret_Rotate_To_Axis"/>
+              <xsd:element type="xsd:string" name="Targeting_Fire_Inaccuracy"/>
+              <xsd:element type="xsd:float" name="Ranged_Target_Z_Adjust"/>
+              <xsd:element type="xsd:string" name="Projectile_Types"/>
+              <xsd:element type="xsd:float" name="Projectile_Fire_Recharge_Seconds"/>
+              <xsd:element type="xsd:byte" name="Projectile_Fire_Pulse_Count"/>
+              <xsd:element type="xsd:float" name="Projectile_Fire_Pulse_Delay_Seconds"/>
+              <xsd:element type="xsd:string" name="Death_SFXEvent_Start_Die"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Select"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Move"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Fleet_Move"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Attack"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Guard"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Fire"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Assist_Move"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Assist_Attack"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Unit_Lost"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Tactical_Build_Started"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Tactical_Build_Complete"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Tactical_Build_Cancelled"/>
+              <xsd:element type="xsd:string" name="CategoryMask"/>
+              <xsd:element type="xsd:string" name="MovementClass"/>
+              <xsd:element type="xsd:string" name="OccupationStyle"/>
+              <xsd:element type="xsd:string" name="Victory_Relevant"/>
+              <xsd:element type="xsd:byte" name="No_Reflection_Below_Detail_Level"/>
+              <xsd:element type="xsd:string" name="No_Refraction_Below_Detail_Level"/>
+              <xsd:element type="xsd:string" name="Ground_Vehicle_Turret_Target"/>
+              <xsd:element type="xsd:string" name="Air_Vehicle_Turret_Target"/>
+              <xsd:element type="xsd:string" name="Is_Visible_On_Radar"/>
+              <xsd:element type="xsd:float" name="Overall_Length"/>
+              <xsd:element type="xsd:float" name="Overall_Width"/>
+              <xsd:element type="xsd:string" name="Has_Land_Evaluator"/>
+              <xsd:element type="xsd:short" name="AI_Combat_Power"/>
+              <xsd:element type="xsd:byte" name="Select_Box_Scale"/>
+              <xsd:element type="xsd:string" name="Select_Box_Z_Adjust"/>
+              <xsd:element type="xsd:byte" name="GUI_Bracket_Size"/>
+              <xsd:element type="xsd:float" name="GUI_Bounds_Scale"/>
+              <xsd:element type="xsd:float" name="Idle_Chase_Range"/>
+              <xsd:element type="xsd:float" name="Guard_Chase_Range"/>
+              <xsd:element type="xsd:float" name="Attack_Move_Response_Range"/>
+              <xsd:element type="xsd:float" name="Targeting_Stickiness_Time_Threshold"/>
+              <xsd:element type="xsd:string" name="Targeting_Priority_Set"/>
+              <xsd:element type="xsd:string" name="Autonomous_Move_Extension_Vs_Attacker"/>
+              <xsd:element type="xsd:string" name="Weather_Category"/>
+              <xsd:element type="xsd:string" name="Death_Clone"/>
+              <xsd:element type="xsd:float" name="Score_Cost_Credits"/>
+              <xsd:element type="xsd:string" name="Influences_Capture_Point"/>
+              <xsd:element type="xsd:string" name="Vehicle_Thief_Inside_Clone"/>
+              <xsd:element type="xsd:string" name="Base_Shield_Penetration_Particle"/>
+              <xsd:element name="Unit_Abilities_Data">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Unit_Ability" maxOccurs="unbounded" minOccurs="0">
+                      <xsd:complexType>
+                        <xsd:choice maxOccurs="unbounded" minOccurs="0">
+                          <xsd:element type="xsd:string" name="Type"/>
+                          <xsd:element type="xsd:byte" name="Expiration_Seconds"/>
+                          <xsd:element type="xsd:float" name="Recharge_Seconds"/>
+                          <xsd:element type="xsd:string" name="Spawned_Object_Type"/>
+                          <xsd:element type="xsd:byte" name="Max_Num_Spawned_Objects"/>
+                          <xsd:element type="xsd:string" name="Owner_Attachment_Bone"/>
+                          <xsd:element type="xsd:string" name="SFXEvent_GUI_Unit_Ability_Activated"/>
+                          <xsd:element type="xsd:string" name="Mod_Multiplier"/>
+                          <xsd:element type="xsd:string" name="SFXEvent_Target_Ability"/>
+                          <xsd:element type="xsd:string" name="Projectile_Types_Override"/>
+                          <xsd:element type="xsd:float" name="Area_Effect_Decal_Distance"/>
+                          <xsd:element type="xsd:byte" name="Targeting_Fire_Inaccuracy_Fixed_Radius_Override"/>
+                          <xsd:element type="xsd:byte" name="Target_Position_Z_Offset"/>
+                          <xsd:element type="xsd:string" name="Disable_Movement"/>
+                          <xsd:element type="xsd:float" name="Effective_Radius"/>
+                          <xsd:element type="xsd:string" name="GUI_Activated_Ability_Name"/>
+                          <xsd:element type="xsd:short" name="Targeting_Max_Attack_Distance"/>
+                        </xsd:choice>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute type="xsd:string" name="SubObjectList" use="optional"/>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="Abilities">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Redirect_Blaster_Ability" maxOccurs="unbounded" minOccurs="0">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element type="xsd:string" name="Initially_Enabled"/>
+                          <xsd:element type="xsd:string" name="Activation_Style"/>
+                          <xsd:element type="xsd:float" name="Redirect_Chance"/>
+                          <xsd:element type="xsd:float" name="Block_Chance"/>
+                          <xsd:element type="xsd:float" name="Reaction_Arc_In_Degrees"/>
+                          <xsd:element type="xsd:float" name="Max_Projectile_Redirection_Angle_In_Degrees"/>
+                          <xsd:element type="xsd:string" name="Turn_To_Face_Unblockable_Shots"/>
+                          <xsd:element type="xsd:string" name="Applicable_Unit_Categories"/>
+                          <xsd:element type="xsd:string" name="Applicable_Unit_Types"/>
+                          <xsd:element type="xsd:string" name="SFXEvent_Activate"/>
+                        </xsd:sequence>
+                        <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="Cable_Ability" minOccurs="0">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element type="xsd:string" name="Activation_Style"/>
+                          <xsd:element type="xsd:float" name="Activation_Min_Range"/>
+                          <xsd:element type="xsd:float" name="Activation_Max_Range"/>
+                          <xsd:element type="xsd:string" name="Activation_Chance"/>
+                          <xsd:element type="xsd:float" name="Cable_Width"/>
+                          <xsd:element type="xsd:byte" name="Cable_Fadeout_Time"/>
+                          <xsd:element type="xsd:string" name="Cable_Render_Mode"/>
+                          <xsd:element type="xsd:string" name="Cable_Texture_Name"/>
+                          <xsd:element type="xsd:byte" name="Drop_Phase_Duration"/>
+                          <xsd:element type="xsd:short" name="Pull_Phase_Duration"/>
+                          <xsd:element type="xsd:short" name="Paralyze_Phase_Duration"/>
+                          <xsd:element type="xsd:string" name="Cable_Length_Fraction"/>
+                          <xsd:element type="xsd:string" name="Cable_End_Speed_Fraction"/>
+                          <xsd:element type="xsd:string" name="Applicable_Unit_Types"/>
+                          <xsd:element type="xsd:string" name="Terminate_Effect_On_Move_Command"/>
+                        </xsd:sequence>
+                        <xsd:attribute type="xsd:string" name="Name"/>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element type="xsd:byte" name="Converted_To_Enemy_Die_Time_Seconds" minOccurs="0"/>
+                  </xsd:sequence>
+                  <xsd:attribute type="xsd:string" name="SubObjectList" use="optional"/>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element type="xsd:byte" name="Converted_To_Enemy_Die_Time_Seconds"/>
+              <xsd:element type="xsd:string" name="Variant_Of_Existing_Type"/>
+              <xsd:element type="xsd:string" name="Specific_Death_Anim_Type"/>
+              <xsd:element type="xsd:string" name="Death_Clone_Is_Obstacle"/>
+              <xsd:element type="xsd:float" name="Custom_Hard_XExtent_Offset"/>
+              <xsd:element type="xsd:float" name="Death_Persistence_Duration"/>
+              <xsd:element type="xsd:string" name="Death_Explosions_End"/>
+              <xsd:element type="xsd:string" name="Death_SFXEvent_End_Die"/>
+              <xsd:element type="xsd:string" name="IsDeathCloneObstacle"/>
+              <xsd:element type="xsd:float" name="Presence_Range"/>
+              <xsd:element type="xsd:string" name="Specific_Death_Anim_Index"/>
+              <xsd:element type="xsd:string" name="Glory_Cinematics"/>
+              <xsd:element type="xsd:string" name="Death_Explosions"/>
+              <xsd:element type="xsd:float" name="Custom_Hard_YExtent_Offset"/>
+              <xsd:element type="xsd:string" name="Is_Squashable_By_Supercrusher"/>
+              <xsd:element type="xsd:float" name="FormationOrder"/>
+              <xsd:element type="xsd:float" name="FormationSpacing"/>
+              <xsd:element type="xsd:float" name="FormationRaggedness"/>
+              <xsd:element type="xsd:float" name="MaxJiggleDistance"/>
+              <xsd:element type="xsd:byte" name="Required_Timeline"/>
+              <xsd:element type="xsd:string" name="Damage_Type"/>
+              <xsd:element type="xsd:float" name="Projectile_Damage"/>
+              <xsd:element type="xsd:short" name="Shield_Points"/>
+              <xsd:element type="xsd:byte" name="Shield_Refresh_Rate"/>
+              <xsd:element type="xsd:string" name="Barrel_Bone_Name"/>
+              <xsd:element type="xsd:byte" name="Occlusion_Silhouette_Enabled"/>
+              <xsd:element type="xsd:string" name="Should_Reinforcements_Move"/>
+              <xsd:element type="xsd:float" name="Deployment_Anim_Rate"/>
+              <xsd:element type="xsd:string" name="Remove_Upon_Death"/>
+              <xsd:element type="xsd:float" name="Death_Fade_Time"/>
+              <xsd:element type="xsd:float" name="Close_Enough_Angle_For_Move_Start"/>
+              <xsd:element type="xsd:string" name="Fire_Weapon_When_Deployed"/>
+              <xsd:element type="xsd:string" name="Fire_Weapon_When_Undeployed"/>
+              <xsd:element type="xsd:string" name="Turret_Rest_Angle"/>
+              <xsd:element type="xsd:string" name="Turret_Deployed_Rest_Angle"/>
+              <xsd:element type="xsd:string" name="HardPoints"/>
+              <xsd:element type="xsd:string" name="IsDeathClone"/>
+              <xsd:element type="xsd:float" name="Min_Speed"/>
+              <xsd:element type="xsd:float" name="OverrideAcceleration"/>
+              <xsd:element type="xsd:float" name="OverrideDeceleration"/>
+              <xsd:element type="xsd:float" name="Max_Rate_Of_Roll"/>
+              <xsd:element type="xsd:float" name="Max_Lift"/>
+              <xsd:element type="xsd:byte" name="Bank_Turn_Angle"/>
+              <xsd:element type="xsd:string" name="Stationary_Space_Layer"/>
+              <xsd:element type="xsd:float" name="PathFrameDelay"/>
+              <xsd:element type="xsd:float" name="Hover_Offset"/>
+              <xsd:element type="xsd:float" name="Prepare_Strafe_Height"/>
+              <xsd:element type="xsd:float" name="MaxFacingLookAheadFrames"/>
+              <xsd:element type="xsd:string" name="Should_Cause_Limited_Turrets_To_Turn"/>
+              <xsd:element type="xsd:string" name="Damaged_Smoke_Asset_Name"/>
+              <xsd:element type="xsd:string" name="Spin_Away_On_Death"/>
+              <xsd:element type="xsd:float" name="Spin_Away_On_Death_Chance"/>
+              <xsd:element type="xsd:string" name="Spin_Away_On_Death_Time"/>
+              <xsd:element type="xsd:string" name="Spin_Away_On_Death_Explosion"/>
+              <xsd:element type="xsd:string" name="Spin_Away_On_Death_SFXEvent_Start_Die"/>
+              <xsd:element type="xsd:byte" name="Wind_Disturbance_Radius"/>
+              <xsd:element type="xsd:byte" name="Wind_Disturbance_Strength"/>
+              <xsd:element type="xsd:float" name="Wind_Disturbance_Sphere_Alpha"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Ambient_Moving"/>
+              <xsd:element type="xsd:float" name="SFXEvent_Ambient_Moving_Min_Delay_Seconds"/>
+              <xsd:element type="xsd:float" name="SFXEvent_Ambient_Moving_Max_Delay_Seconds"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Engine_Cinematic_Focus_Loop"/>
+              <xsd:element type="xsd:float" name="Custom_Hard_YExtent_Deployed"/>
+              <xsd:element type="xsd:short" name="Sensor_Range"/>
+              <xsd:element type="xsd:float" name="Targeting_Fire_Inaccuracy_Fixed_Radius"/>
+              <xsd:element type="xsd:string" name="Fire_Category_Restrictions"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Engine_Idle_Loop"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Engine_Moving_Loop"/>
+              <xsd:element type="xsd:float" name="Tread_Scroll_Rate"/>
+              <xsd:element type="xsd:string" name="SurfaceFX_Name"/>
+              <xsd:element type="xsd:string" name="Blob_Shadow_Bone_Name"/>
+              <xsd:element type="xsd:string" name="Stealth_Capable"/>
+              <xsd:element type="xsd:string" name="CanCellStack"/>
+              <xsd:element type="xsd:string" name="Is_Sprite"/>
+              <xsd:element type="xsd:float" name="Mouse_Collide_Override_Sphere_Radius"/>
+              <xsd:element type="xsd:string" name="Ground_Infantry_Turret_Target"/>
+              <xsd:element type="xsd:string" name="Is_Squashable"/>
+              <xsd:element type="xsd:float" name="Surface_Type_Cover_Damage_Shield"/>
+              <xsd:element type="xsd:string" name="UseSecondaryFacing"/>
+              <xsd:element type="xsd:float" name="SecondaryTurnInPlaceROTCoefficient"/>
+              <xsd:element type="xsd:float" name="SecondaryTurnAngle"/>
+              <xsd:element type="xsd:float" name="MinSecondaryTurnROTCoefficient"/>
+              <xsd:element type="xsd:float" name="MaxsdecondaryTurnROTCoefficient"/>
+              <xsd:element type="xsd:float" name="SecondaryTurnLookaheadDistance"/>
+              <xsd:element type="xsd:string" name="Shield_Armor_Type"/>
+              <xsd:element type="xsd:string" name="Is_Affected_By_Gravity_Control_Field"/>
+              <xsd:element type="xsd:string" name="Loop_Idle_Anim_00"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Turret_Rotating_Loop"/>
+              <xsd:element type="xsd:string" name="Fire_Weapon_When_In_Rocket_Attack_Mode"/>
+              <xsd:element type="xsd:string" name="Fire_Weapon_When_In_Normal_Attack_Mode"/>
+              <xsd:element type="xsd:string" name="Lua_Script"/>
+              <xsd:element type="xsd:string" name="Targeting_Land_Model_Stay_Horiz_Flat">
+                <xsd:annotation>
+                  <xsd:documentation> 
+                    Default for most all units is Yes, since we want units like infantry to remain upgright and not pitch up and down at targets of different elevations. Also, this won't apply to units with turrets, since they don't need to turn to face the enemy. This is needed to be No for the TIE Crawler, because it has no turret, so it needs to turn and face enemy units. But, it also hugs the terrain on pitch and roll, so we don't want it to flatten out with the horizontal ground plane (Yes/No). 
+		              </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Selt_Destruct_SFXEvent_Start_Die"/>
+              <xsd:element type="xsd:string" name="No_Colorization_Color"/>
+              <xsd:element type="xsd:string" name="Hardpoints"/>
+              <xsd:element type="xsd:string" name="Destruction_Survivors"/>
+              <xsd:element type="xsd:float" name="Max_Thrust"/>
+              <xsd:element type="xsd:float" name="Layer_Z_Adjust"/>
+              <xsd:element type="xsd:string" name="Fires_Forward"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Ambient_Loop"/>
+              <xsd:element type="xsd:string" name="Asteroid_Damage_Hit_Particles"/>
+              <xsd:element type="xsd:float" name="Exit_Door_Angle_Degrees"/>
+              <xsd:element type="xsd:float" name="Exit_Door_Distance"/>
+            </xsd:choice>
+            <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

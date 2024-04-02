@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="Planets">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="Planet" maxOccurs="unbounded" minOccurs="0">
+          <xsd:annotation>
+            <xsd:documentation>
+              Note: Planet Capture Bonus = (Max_Ground_Base + Max_Space_Base) x 2000
+
+              To that number add the following bonuses for planet type:
+              
+              Desert/Barren		-3000
+              Arctic				  -2000
+              Swamp				    -1000
+              Gas Giant				0
+              Ocean					  0
+              Volcanic			  +1000
+              Forest				  +2000
+              Temperate			  +3000
+              Urban				    +4000
+          </xsd:documentation>
+          </xsd:annotation>
+          <xsd:complexType>
+            <xsd:choice maxOccurs="unbounded" minOccurs="0">
+              <xsd:element type="xsd:string" name="Text_ID"/>
+              <xsd:element type="xsd:string" name="Galactic_Model_Name"/>
+              <xsd:element type="xsd:string" name="Loop_Idle_Anim_00"/>
+              <xsd:element type="xsd:string" name="Always_Instantiate_Galactic"/>
+              <xsd:element type="xsd:float" name="Mass"/>
+              <xsd:element type="xsd:float" name="Scale_Factor"/>
+              <xsd:element type="xsd:string" name="Show_Name"/>
+              <xsd:element type="xsd:string" name="Name_Adjust"/>
+              <xsd:element type="xsd:string" name="Behavior"/>
+              <xsd:element type="xsd:string" name="Pre_Lit"/>
+              <xsd:element type="xsd:byte" name="Political_Control"/>
+              <xsd:element type="xsd:string" name="Camera_Aligned"/>
+              <xsd:element type="xsd:string" name="Terrain"/>
+              <xsd:element type="xsd:short" name="Planet_Credit_Value"/>
+              <xsd:element type="xsd:string" name="Galactic_Position"/>
+              <xsd:element type="xsd:byte" name="Special_Structures"/>
+              <xsd:element type="xsd:string" name="In_Background"/>
+              <xsd:element type="xsd:byte" name="Max_Ground_Base"/>
+              <xsd:element type="xsd:byte" name="Max_Space_Base"/>
+              <xsd:element type="xsd:byte" name="Zoomed_Terrain_Index"/>
+              <xsd:element type="xsd:string" name="Destroyed_Galactic_Model_Name"/>
+              <xsd:element type="xsd:string" name="GUI_Model_Name"/>
+              <xsd:element type="xsd:float" name="Mouse_Collide_Override_Sphere_Radius"/>
+              <xsd:element type="xsd:string" name="Facing_Adjust"/>
+              <xsd:element type="xsd:byte" name="Planet_Destroyed_Credit_Value"/>
+              <xsd:element type="xsd:byte" name="Special_Structures_Land"/>
+              <xsd:element type="xsd:byte" name="Special_Structures_Space"/>
+              <xsd:element type="xsd:string" name="The_Force"/>
+              <xsd:element type="xsd:float" name="Force_Strength"/>
+              <xsd:element type="xsd:string" name="Planet_Surface_Accessible"/>
+              <xsd:element type="xsd:float" name="Planet_Capture_Bonus_Reward"/>
+              <xsd:element type="xsd:string" name="Land_Tactical_Map"/>
+              <xsd:element type="xsd:string" name="Space_Tactical_Map"/>
+              <xsd:element type="xsd:string" name="Destroyed_Space_Tactical_Map"/>
+              <xsd:element type="xsd:byte" name="Planet_Slice_Difficulty_Rating"/>
+              <xsd:element type="xsd:byte" name="Planet_Tech_Availability_Rating"/>
+              <xsd:element type="xsd:string" name="Planet_Slice_Affinity_Types"/>
+              <xsd:element type="xsd:string" name="Describe_Population"/>
+              <xsd:element type="xsd:string" name="Describe_Wildlife"/>
+              <xsd:element type="xsd:string" name="Describe_Terrain"/>
+              <xsd:element type="xsd:string" name="Describe_Weather"/>
+              <xsd:element type="xsd:string" name="Describe_Tactical"/>
+              <xsd:element type="xsd:string" name="Describe_Advantage"/>
+              <xsd:element type="xsd:string" name="Describe_History"/>
+              <xsd:element type="xsd:string" name="Planet_Ability_Name"/>
+              <xsd:element type="xsd:string" name="Planet_Ability_Description"/>
+              <xsd:element type="xsd:string" name="Encyclopedia_Text"/>
+              <xsd:element type="xsd:string" name="Encyclopedia_Weather_Icon"/>
+              <xsd:element type="xsd:string" name="Encyclopedia_Weather_Name"/>
+              <xsd:element type="xsd:string" name="Encyclopedia_Weather_Info"/>
+              <xsd:element type="xsd:string" name="Planet_Ability_Icon"/>
+              <xsd:element type="xsd:string" name="Native_Icon_Name"/>
+              <xsd:element type="xsd:string" name="Potential_Indigenous_Power"/>
+              <xsd:element type="xsd:byte" name="Additional_Population_Capacity"/>
+              <xsd:element name="Abilities">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Reduce_Production_Price_Ability" minOccurs="0">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element type="xsd:string" name="Unit_Strength_Category"/>
+                          <xsd:element type="xsd:string" name="Applicable_Unit_Categories"/>
+                          <xsd:element type="xsd:string" name="Applicable_Unit_Types"/>
+                          <xsd:element type="xsd:float" name="Price_Reduction_Percentage"/>
+                          <xsd:element type="xsd:byte" name="Stacking_Category"/>
+                          <xsd:element type="xsd:string" name="Galaxy_Wide"/>
+                        </xsd:sequence>
+                        <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="Galaxy_Wide_Upgrade_Ability" minOccurs="0">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element type="xsd:string" name="Space_Upgrade_Type"/>
+                          <xsd:element type="xsd:string" name="Land_Upgrade_Type"/>
+                        </xsd:sequence>
+                        <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="System_Spy_Ability" minOccurs="0">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element type="xsd:string" name="Initially_Enabled"/>
+                          <xsd:element type="xsd:string" name="Activation_Style"/>
+                          <xsd:element type="xsd:string" name="Causes_Despawn"/>
+                          <xsd:element type="xsd:float" name="Duration_In_Secs"/>
+                          <xsd:element type="xsd:string" name="See_Base_Levels"/>
+                          <xsd:element type="xsd:string" name="See_Credit_Income"/>
+                          <xsd:element type="xsd:string" name="See_Credit_Income_Breakdown"/>
+                          <xsd:element type="xsd:string" name="See_Num_Fleets"/>
+                          <xsd:element type="xsd:string" name="See_Most_Powerful_Ship"/>
+                          <xsd:element type="xsd:string" name="See_Fleet_Contents"/>
+                          <xsd:element type="xsd:string" name="See_Num_Ground_Companies"/>
+                          <xsd:element type="xsd:string" name="See_Ground_Company_Contents"/>
+                          <xsd:element type="xsd:string" name="See_Special_Structures"/>
+                          <xsd:element type="xsd:string" name="See_Political_Control"/>
+                          <xsd:element type="xsd:string" name="See_Political_Control_Breakdown"/>
+                          <xsd:element type="xsd:string" name="See_Current_Production"/>
+                          <xsd:element type="xsd:string" name="See_Minor_Stealth_Heroes"/>
+                          <xsd:element type="xsd:string" name="See_Major_Stealth_Heroes"/>
+                        </xsd:sequence>
+                        <xsd:attribute type="xsd:string" name="Name"/>
+                      </xsd:complexType>
+                    </xsd:element>
+                  </xsd:sequence>
+                  <xsd:attribute type="xsd:string" name="SubObjectList" use="optional"/>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Planet_Is_Mining_Colony"/>
+              <xsd:element type="xsd:string" name="Planet_Black_Market_Influences"/>
+              <xsd:element type="xsd:float" name="Galactic_Influence_Range">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    This galactiv influence range controls how far the Spy Network ability extends.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:float" name="Hyperspace_Fleet_Reveal_Range"/>
+              <xsd:element type="xsd:string" name="Planet_Groundbase_Stealth"/>
+              <xsd:element type="xsd:string" name="Planet_Restricted_Unit_Categories"/>
+              <xsd:element type="xsd:string" name="Planet_Restricted_Unit_Types"/>
+              <xsd:element type="xsd:string" name="Planet_Is_Destroyable_By_TSW">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Unique case: Already asteroids, so Death Star can't blow them up like other planets.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Planet_Retains_Residual_Influence">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    If you abandon this planet, you will not retain political control.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Planet_Vigilance"/>
+            </xsd:choice>
+            <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
