@@ -1,0 +1,207 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="SpaceUnit" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:choice>
+              <xs:element type="xs:string" name="Text_ID"/>
+              <xs:element type="xs:string" name="No_Colorization_Color"/>
+              <xs:element type="xs:string" name="Encyclopedia_Text">
+                <xsd:annotation>
+                  <xsd:documentation>
+                      The encyclopedia text.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xs:element>
+              <xs:element type="xs:string" name="Encyclopedia_Unit_Class"/>
+              <xs:element type="xs:string" name="Encyclopedia_Good_Against">
+                <xsd:annotation>
+                  <xsd:documentation>
+                      Defines which opponents this unit is good against.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xs:element>
+              <xs:element type="xs:string" name="Encyclopedia_Vulnerable_To">
+                <xsd:annotation>
+                  <xsd:documentation>
+                      Defines which opponents this unit is vulnerable to.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xs:element>
+              <xs:element type="xs:byte" name="GUI_Row"/>
+              <xs:element type="xs:string" name="Space_Model_Name"/>
+              <xs:element type="xs:string" name="Icon_Name"/>
+              <xs:element type="xs:short" name="Select_Box_Scale"/>
+              <xs:element type="xs:byte" name="Select_Box_Z_Adjust"/>
+              <xs:element type="xs:float" name="Mass"/>
+              <xs:element type="xs:float" name="Scale_Factor"/>
+              <xs:element type="xs:byte" name="Ranking_In_Category"/>
+              <xs:element type="xs:float" name="Dense_FOW_Reveal_Range_Multiplier"/>
+              <xs:element type="xs:float" name="Max_Speed"/>
+              <xs:element type="xs:float" name="Max_Rate_Of_Turn"/>
+              <xs:element type="xs:string" name="MovementClass"/>
+              <xs:element type="xs:string" name="Space_Layer"/>
+              <xs:element type="xs:float" name="Layer_Z_Adjust"/>
+              <xs:element type="xs:float" name="Max_Rate_Of_Roll"/>
+              <xs:element type="xs:byte" name="Bank_Turn_Angle"/>
+              <xs:element type="xs:float" name="OverrideAcceleration"/>
+              <xs:element type="xs:float" name="OverrideDeceleration"/>
+              <xs:element type="xs:float" name="Max_Thrust"/>
+              <xs:element type="xs:string" name="Hyperspace"/>
+              <xs:element type="xs:float" name="Hyperspace_Speed"/>
+              <xs:element type="xs:float" name="Maintenance_Cost"/>
+              <xs:element type="xs:string" name="Armor_Type"/>
+              <xs:element type="xs:string" name="Shield_Armor_Type"/>
+              <xs:element type="xs:byte" name="Damage"/>
+              <xs:element type="xs:short" name="Autoresolve_Health"/>
+              <xs:element type="xs:short" name="Shield_Points"/>
+              <xs:element type="xs:short" name="Tactical_Health"/>
+              <xs:element type="xs:byte" name="Shield_Refresh_Rate"/>
+              <xs:element type="xs:short" name="Energy_Capacity"/>
+              <xs:element type="xs:short" name="Energy_Refresh_Rate"/>
+              <xs:element type="xs:string" name="Affiliation"/>
+              <xs:element type="xs:byte" name="Tech_Level"/>
+              <xs:element type="xs:byte" name="Required_Timeline"/>
+              <xs:element type="xs:byte" name="Required_Ground_Base_Level"/>
+              <xs:element type="xs:byte" name="Required_Star_Base_Level"/>
+              <xs:element type="xs:string" name="Required_Planets">
+              <xs:element type="xs:string" name="Required_Special_Structures">
+              <xs:element type="xs:string" name="Ship_Class"/>
+              <xs:element type="xs:string" name="Surface_Bombardment_Capable"/>
+              <xs:element type="xs:byte" name="Formation_Priority"/>
+              <xs:element type="xs:string" name="Is_Escort"/>
+              <xs:element type="xs:string" name="Is_Bomber"/>
+              <xs:element type="xs:byte" name="Political_Control"/>
+              <xs:element type="xs:byte" name="Squadron_Capacity"/>
+              <xs:element type="xs:byte" name="Transport_Capacity"/>
+              <xs:element type="xs:byte" name="Number_per_Squadron"/>
+              <xs:element type="xs:short" name="Build_Cost_Credits"/>
+              <xs:element type="xs:short" name="AI_Combat_Power"/>
+              <xs:element type="xs:byte" name="Build_Time_Seconds"/>
+              <xs:element type="xs:string" name="Build_Tab_Space_Units">
+              <xs:element type="xs:byte" name="Size_Value"/>
+              <xs:element type="xs:string" name="Behavior"/>
+              <xs:element type="xs:string" name="SpaceBehavior"/>
+              <xs:element type="xs:string" name="Starting_Spawned_Units_Tech_0"/>
+              <xs:element type="xs:byte" name="Spawned_Squadron_Delay_Seconds"/>
+              <xs:element type="xs:string" name="Reserve_Spawned_Units_Tech_0"/>
+              <xs:element type="xs:string" name="Starting_Spawned_Units_Tech_1"/>
+              <xs:element type="xs:byte" name="Spawned_Squadron_Delay_Seconds"/>
+              <xs:element type="xs:string" name="Reserve_Spawned_Units_Tech_1"/>
+              <xs:element type="xs:string" name="Starting_Spawned_Units_Tech_2"/>
+              <xs:element type="xs:byte" name="Spawned_Squadron_Delay_Seconds"/>
+              <xs:element type="xs:string" name="Reserve_Spawned_Units_Tech_2"/>
+              <xs:element type="xs:string" name="Starting_Spawned_Units_Tech_3"/>
+              <xs:element type="xs:byte" name="Spawned_Squadron_Delay_Seconds"/>
+              <xs:element type="xs:string" name="Reserve_Spawned_Units_Tech_3"/>
+              <xs:element type="xs:string" name="Starting_Spawned_Units_Tech_4"/>
+              <xs:element type="xs:byte" name="Spawned_Squadron_Delay_Seconds"/>
+              <xs:element type="xs:string" name="Reserve_Spawned_Units_Tech_4"/>
+              <xs:element type="xs:string" name="Starting_Spawned_Units_Tech_5"/>
+              <xs:element type="xs:byte" name="Spawned_Squadron_Delay_Seconds"/>
+              <xs:element type="xs:string" name="Reserve_Spawned_Units_Tech_5"/>
+              <xs:element type="xs:string" name="Collidable_By_Projectile_Living"/>
+              <xs:element type="xs:string" name="Asteroid_Damage_Hit_Particles"/>
+              <xs:element type="xs:float" name="Space_FOW_Reveal_Range"/>
+              <xs:element type="xs:float" name="Targeting_Max_Attack_Distance"/>
+              <xs:element type="xs:string" name="Death_Explosions"/>
+              <xs:element type="xs:string" name="Death_Clone"/>
+              <xs:element type="xs:string" name="HardPoints"/>
+              <xs:element type="xs:string" name="CategoryMask"/>
+              <xs:element type="xs:string" name="GUI_Model_Name"/>
+              <xs:element type="xs:short" name="GUI_Distance"/>
+              <xs:element type="xs:string" name="GUI_Offset"/>
+              <xs:element type="xs:byte" name="GUI_Velocity"/>
+              <xs:element type="xs:string" name="Victory_Relevant"/>
+              <xs:element type="xs:string" name="Has_Space_Evaluator"/>
+              <xs:element type="xs:string" name="SFXEvent_Build_Started"/>
+              <xs:element type="xs:string" name="SFXEvent_Build_Cancelled"/>
+              <xs:element type="xs:string" name="SFXEvent_Build_Complete"/>
+              <xs:element type="xs:string" name="SFXEvent_Ambient_Loop"/>
+              <xs:element type="xs:string" name="SFXEvent_Select"/>
+              <xs:element type="xs:string" name="SFXEvent_Move"/>
+              <xs:element type="xs:string" name="SFXEvent_Fleet_Move"/>
+              <xs:element type="xs:string" name="SFXEvent_Attack"/>
+              <xs:element type="xs:string" name="SFXEvent_Guard"/>
+              <xs:element type="xs:string" name="SFXEvent_Stop"/>
+              <xs:element type="xs:string" name="SFXEvent_Barrage"/>
+              <xs:element type="xs:string" name="SFXEvent_Move_Into_Asteroid_Field"/>
+              <xs:element type="xs:string" name="SFXEvent_Move_Into_Nebula"/>
+              <xs:element type="xs:string" name="SFXEvent_Damaged_By_Asteroid"/>
+              <xs:element type="xs:string" name="SFXEvent_Bombard_Select_Target"/>
+              <xs:element type="xs:string" name="SFXEvent_Bombard_Incoming"/>
+              <xs:element type="xs:string" name="SFXEvent_Attack_Hardpoint"/>
+              <xs:element type="xs:string" name="SFXEvent_Hardpoint_Destroyed"/>
+              <xs:element type="xs:string" name="SFXEvent_Engine_Idle_Loop"/>
+              <xs:element type="xs:string" name="SFXEvent_Engine_Moving_Loop"/>
+              <xs:element type="xs:string" name="SFXEvent_Engine_Cinematic_Focus_Loop"/>
+              <xs:element type="xs:string" name="SFXEvent_Health_Critical_Warning"/>
+              <xs:element type="xs:string" name="Death_SFXEvent_Start_Die"/>
+              <xs:element type="xs:string" name="Space_Full_Stop_Command"/>
+              <xs:element type="xs:string" name="Is_Visible_On_Radar"/>
+              <xs:element type="xs:string" name="Radar_Icon_Name"/>
+              <xs:element type="xs:string" name="Radar_Icon_Size"/>
+              <xs:element type="xs:float" name="Radar_Icon_Scale_Land"/>
+              <xs:element type="xs:float" name="Radar_Icon_Scale_Space"/>
+              <xs:element type="xs:float" name="Guard_Chase_Range"/>
+              <xs:element type="xs:float" name="Idle_Chase_Range"/>
+              <xs:element type="xs:float" name="Attack_Move_Response_Range"/>
+              <xs:element type="xs:float" name="Targeting_Stickiness_Time_Threshold"/>
+              <xs:element type="xs:string" name="Targeting_Priority_Set"/>
+              <xs:element type="xs:string" name="Lua_Script"/>
+              <xs:element name="Unit_Abilities_Data">
+                <xsd:annotation>
+                  <xsd:documentation>
+                      List of activated abilities. Activated abilities are abilities that can be activated and deactivated.
+                  </xsd:documentation>
+                </xsd:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Unit_Ability">
+                      <xs:annotation>
+                        <xs:documentation> Primary ability </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:string" name="Type"/>
+                          <xs:element type="xs:string" name="Mod_Multiplier">
+                          <xs:element type="xs:byte" name="Recharge_Seconds"/>
+                          <xs:element type="xs:byte" name="Expiration_Seconds"/>
+                          <xs:element type="xs:string" name="Alternate_Name_Text"/>
+                          <xs:element type="xs:string" name="Alternate_Description_Text"/>
+                          <xs:element type="xs:string" name="Alternate_Icon_Name"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="SubObjectList"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Abilities">
+                <xsd:annotation>
+                  <xsd:documentation>
+                      List of passiv abilities. Passiv abilities are abilities that are always activated or activate automatically.
+                  </xsd:documentation>
+                </xsd:annotation>
+                <xs:complexType>
+                  <xs:sequence/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element type="xs:short" name="Score_Cost_Credits"/>
+              <xs:element type="xs:byte" name="Population_Value"/>
+              <xs:element type="xs:short" name="Custom_Hard_XExtent"/>
+              <xs:element type="xs:short" name="Tactical_Build_Cost_Multiplayer"/>
+              <xs:element type="xs:byte" name="Tactical_Build_Time_Seconds"/>
+              <xs:element type="xs:string" name="Tactical_Build_Prerequisites"/>
+              <xs:element type="xs:string" name="Tactical_Production_Queue"/>
+              <xs:element type="xs:string" name="xxxSpace_Model_Name"/>
+              <xs:element type="xs:float" name="Death_Persistence_Duration"/>
+              <xs:element type="xs:string" name="Remove_Upon_Death"/>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
