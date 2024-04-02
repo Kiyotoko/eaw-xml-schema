@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Some content of this schema was added with the help of the Beginner's Modding Guide (PC) by RC1162. You can check out the guide at https://gamefaqs.gamespot.com/pc/925180-star-wars-empire-at-war/faqs/45886.
+-->
 <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <xsd:element name="UnitData">
     <xsd:complexType>
       <xsd:sequence>
-        <xsd:element name="SpaceUnit" maxOccurs="unbounded" minOccurs="0">
+        <xsd:element name="SpaceUnit" maxOccurs="unbounded" minOccurs="1">
           <xsd:complexType>
             <xsd:choice>
               <xsd:element type="xsd:string" name="Text_ID"/>
@@ -19,90 +22,311 @@
               <xsd:element type="xsd:string" name="Encyclopedia_Good_Against">
                 <xsd:annotation>
                   <xsd:documentation>
-                      Defines which opponents this unit is good against.
+                      Defines which opponents this unit is good against (maximum of 3). Only tells the game what to display in your popup information window for "Good against" and "Vulnerable To".
                   </xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
               <xsd:element type="xsd:string" name="Encyclopedia_Vulnerable_To">
                 <xsd:annotation>
                   <xsd:documentation>
-                      Defines which opponents this unit is vulnerable to.
+                      Defines which opponents this unit is vulnerable to (maximum of 3). Only tells the game what to display in your popup information window for "Good against" and "Vulnerable To".
                   </xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
-              <xsd:element type="xsd:byte" name="GUI_Row"/>
+              <xsd:element type="xsd:integer" name="GUI_Row"/>
               <xsd:element type="xsd:string" name="Space_Model_Name"/>
               <xsd:element type="xsd:string" name="Icon_Name"/>
-              <xsd:element type="xsd:short" name="Select_Box_Scale"/>
-              <xsd:element type="xsd:byte" name="Select_Box_Z_Adjust"/>
+              <xsd:element type="xsd:float" name="Select_Box_Scale"/>
+              <xsd:element type="xsd:float" name="Select_Box_Z_Adjust"/>
               <xsd:element type="xsd:float" name="Mass"/>
-              <xsd:element type="xsd:float" name="Scale_Factor"/>
-              <xsd:element type="xsd:byte" name="Ranking_In_Category"/>
+              <xsd:element type="xsd:float" name="Scale_Factor">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the scale factor of a unit from the model size to the actual 
+                    in-game size.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Ranking_In_Category"/>
               <xsd:element type="xsd:float" name="Dense_FOW_Reveal_Range_Multiplier"/>
               <xsd:element type="xsd:float" name="Max_Speed"/>
-              <xsd:element type="xsd:float" name="Max_Rate_Of_Turn"/>
+              <xsd:element type="xsd:float" name="Max_Rate_Of_Turn">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets how fast a unit can turn.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:string" name="MovementClass"/>
               <xsd:element type="xsd:string" name="Space_Layer"/>
               <xsd:element type="xsd:float" name="Layer_Z_Adjust"/>
               <xsd:element type="xsd:float" name="Max_Rate_Of_Roll"/>
-              <xsd:element type="xsd:byte" name="Bank_Turn_Angle"/>
+              <xsd:element type="xsd:integer" name="Bank_Turn_Angle"/>
               <xsd:element type="xsd:float" name="OverrideAcceleration"/>
               <xsd:element type="xsd:float" name="OverrideDeceleration"/>
               <xsd:element type="xsd:float" name="Max_Thrust"/>
               <xsd:element type="xsd:string" name="Hyperspace"/>
-              <xsd:element type="xsd:float" name="Hyperspace_Speed"/>
+              <xsd:element type="xsd:float" name="Hyperspace_Speed">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets how fast a unit goes from planet to planet in the Galactic View groups of units only travel as fast as the slowest unit, a higher number mean faster speed.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:float" name="Maintenance_Cost"/>
               <xsd:element type="xsd:string" name="Armor_Type"/>
               <xsd:element type="xsd:string" name="Shield_Armor_Type"/>
-              <xsd:element type="xsd:byte" name="Damage"/>
-              <xsd:element type="xsd:short" name="Autoresolve_Health"/>
-              <xsd:element type="xsd:short" name="Shield_Points"/>
-              <xsd:element type="xsd:short" name="Tactical_Health"/>
-              <xsd:element type="xsd:byte" name="Shield_Refresh_Rate"/>
-              <xsd:element type="xsd:short" name="Energy_Capacity"/>
-              <xsd:element type="xsd:short" name="Energy_Refresh_Rate"/>
+              <xsd:element type="xsd:integer" name="Damage">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets how much damage the unit does in an autoresolved battle. 
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Autoresolve_Health">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets how much health the unit has in an autoresolved battle. Note: Tactical health is defined at Tactical_Health.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Shield_Points">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets how many shield points the unit has. Set to -1 for infinite.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Tactical_Health">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets how many shield points the unit has. Set to -1 for infinite. Note: Autoresolve health is defined at Autoresolve_Health.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Shield_Refresh_Rate">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the interval in seconds to refresh a part of the shield. For comparisation, capital ships like the calamari cruiser have a value of 50 and corvets a value between 10 and 20.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Energy_Capacity"/>
+              <xsd:element type="xsd:integer" name="Energy_Refresh_Rate"/>
               <xsd:element type="xsd:string" name="Affiliation"/>
-              <xsd:element type="xsd:byte" name="Tech_Level"/>
-              <xsd:element type="xsd:byte" name="Required_Timeline"/>
-              <xsd:element type="xsd:byte" name="Required_Ground_Base_Level"/>
-              <xsd:element type="xsd:byte" name="Required_Star_Base_Level"/>
+              <xsd:element type="xsd:integer" name="Tech_Level">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the tech level unit becomes available, for Rebels 0-3, for the Empire 1-4.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Required_Timeline"/>
+              <xsd:element type="xsd:integer" name="Required_Ground_Base_Level">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets what ground base level is required to build the unit. Note: You can set it to 0 to never have to build a ground base to build space units. For space units this is normally 0.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Required_Star_Base_Level">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets what space station level is required to build the unit. Note: You can set it to 0 to never have to build a space station to build space units.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:string" name="Required_Planets"/>
               <xsd:element type="xsd:string" name="Required_Special_Structures"/>
               <xsd:element type="xsd:string" name="Ship_Class"/>
               <xsd:element type="xsd:string" name="Surface_Bombardment_Capable"/>
-              <xsd:element type="xsd:byte" name="Formation_Priority"/>
-              <xsd:element type="xsd:string" name="Is_Escort"/>
-              <xsd:element type="xsd:string" name="Is_Bomber"/>
-              <xsd:element type="xsd:byte" name="Political_Control"/>
-              <xsd:element type="xsd:byte" name="Squadron_Capacity"/>
-              <xsd:element type="xsd:byte" name="Transport_Capacity"/>
-              <xsd:element type="xsd:byte" name="Number_per_Squadron"/>
-              <xsd:element type="xsd:short" name="Build_Cost_Credits"/>
-              <xsd:element type="xsd:short" name="AI_Combat_Power"/>
-              <xsd:element type="xsd:byte" name="Build_Time_Seconds"/>
-              <xsd:element type="xsd:string" name="Build_Tab_Space_Units"/>
-              <xsd:element type="xsd:byte" name="Size_Value"/>
+              <xsd:element type="xsd:integer" name="Formation_Priority"/>
+              <xsd:element type="xsd:string" name="Is_Escort">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets whether or not a unit can guard other units (Yes/No).
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Is_Bomber">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets whether or not a unit is a bomber (Yes/No).
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Political_Control"/>
+              <xsd:element type="xsd:integer" name="Squadron_Capacity"/>
+              <xsd:element type="xsd:integer" name="Transport_Capacity"/>
+              <xsd:element type="xsd:integer" name="Number_per_Squadron"/>
+              <xsd:element type="xsd:integer" name="Build_Cost_Credits">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets how many credits you have to spend to build the unit.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="AI_Combat_Power"/>
+              <xsd:element type="xsd:integer" name="Build_Time_Seconds">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the build time for the unit in seconds.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Build_Tab_Space_Units">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets whether or not it's part of the queue for space units.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Build_Tab_Space_Units">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets whether or not it's part of the queue for space units (Yes/No).
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Build_Initially_Locked">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets whether or not the unit must be researched/stolen when tech level is reached (Yes/No).
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Build_Can_Be_Unlocked_By_Slicer">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets whether or not the unit must be researched/stolen when tech level is reached (Yes/No).
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Slice_Cost_Credits">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets what the slice cost is if the build is initially locked, and can be unlocked by slicer (Yes/No).
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Size_Value"/>
               <xsd:element type="xsd:string" name="Behavior"/>
               <xsd:element type="xsd:string" name="SpaceBehavior"/>
-              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_0"/>
-              <xsd:element type="xsd:byte" name="Spawned_Squadron_Delay_Seconds"/>
-              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_0"/>
-              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_1"/>
-              <xsd:element type="xsd:byte" name="Spawned_Squadron_Delay_Seconds"/>
-              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_1"/>
-              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_2"/>
-              <xsd:element type="xsd:byte" name="Spawned_Squadron_Delay_Seconds"/>
-              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_2"/>
-              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_3"/>
-              <xsd:element type="xsd:byte" name="Spawned_Squadron_Delay_Seconds"/>
-              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_3"/>
-              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_4"/>
-              <xsd:element type="xsd:byte" name="Spawned_Squadron_Delay_Seconds"/>
-              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_4"/>
-              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_5"/>
-              <xsd:element type="xsd:byte" name="Spawned_Squadron_Delay_Seconds"/>
-              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_5"/>
-              <xsd:element type="xsd:string" name="Collidable_By_Projectile_Living"/>
+              <xsd:element type="xsd:integer" name="Spawned_Squadron_Delay_Seconds">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Defines the delay between spawning a new squadron in seconds.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_0">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Pair of a squadron unit and the number spawned, separated by a comma. Multiple items define multiple squadron types. Defines squadrons for tech 0 and later. Can be overwritten to define squadrons for a later tech level. This entry might look like this:
+                    
+                    TIE_Fighter_Squadron, 2
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_0">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Pair of a squadron unit and the number in reserve, separated by a comma. Multiple items define multiple squadron types. Defines reserve squadrons for tech 0 and later. Can be overwritten to define squadrons for a later tech level. This entry might look like this:
+                    
+                    TIE_Fighter_Squadron, 8
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_1">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Pair of a squadron unit and the number spawned, separated by a comma. Multiple items define multiple squadron types. Defines squadrons for tech 1 and later. Can be overwritten to define squadrons for a later tech level. This entry might look like this:
+                    
+                    TIE_Fighter_Squadron, 2
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_1">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Pair of a squadron unit and the number in reserve, separated by a comma. Multiple items define multiple squadron types. Defines reserve squadrons for tech 1 and later. Can be overwritten to define squadrons for a later tech level. This entry might look like this:
+                    
+                    TIE_Fighter_Squadron, 8
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_2">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Pair of a squadron unit and the number spawned, separated by a comma. Multiple items define multiple squadron types. Defines squadrons for tech 2 and later. Can be overwritten to define squadrons for a later tech level. This entry might look like this:
+                    
+                    TIE_Fighter_Squadron, 2
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_2">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Pair of a squadron unit and the number in reserve, separated by a comma. Multiple items define multiple squadron types. Defines reserve squadrons for tech 2 and later. Can be overwritten to define squadrons for a later tech level. This entry might look like this:
+                    
+                    TIE_Fighter_Squadron, 8
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_3">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Pair of a squadron unit and the number spawned, separated by a comma. Multiple items define multiple squadron types. Defines squadrons for tech 3 and later. Can be overwritten to define squadrons for a later tech level. This entry might look like this:
+                    
+                    TIE_Fighter_Squadron, 2
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_3">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Pair of a squadron unit and the number in reserve, separated by a comma. Multiple items define multiple squadron types. Defines reserve squadrons for tech 3 and later. Can be overwritten to define squadrons for a later tech level. This entry might look like this:
+                    
+                    TIE_Fighter_Squadron, 8
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_4">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Pair of a squadron unit and the number spawned, separated by a comma. Multiple items define multiple squadron types. Defines squadrons for tech 4 and later. Can be overwritten to define squadrons for a later tech level. This entry might look like this:
+                    
+                    TIE_Fighter_Squadron, 2
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_4">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Pair of a squadron unit and the number in reserve, separated by a comma. Multiple items define multiple squadron types. Defines reserve squadrons for tech 4 and later. Can be overwritten to define squadrons for a later tech level. This entry might look like this:
+                    
+                    TIE_Fighter_Squadron, 8
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Starting_Spawned_Units_Tech_5">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Pair of a squadron unit and the number spawned, separated by a comma. Multiple items define multiple squadron types. Defines squadrons for tech 5. This entry might look like this:
+                    
+                    TIE_Fighter_Squadron, 2
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Reserve_Spawned_Units_Tech_5">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Pair of a squadron unit and the number in reserve, separated by a comma. Multiple items define multiple squadron types. Defines reserve squadrons for tech 5. This entry might look like this:
+                    
+                    TIE_Fighter_Squadron, 8
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:string" name="Asteroid_Damage_Hit_Particles"/>
               <xsd:element type="xsd:float" name="Space_FOW_Reveal_Range"/>
               <xsd:element type="xsd:float" name="Targeting_Max_Attack_Distance"/>
@@ -111,9 +335,9 @@
               <xsd:element type="xsd:string" name="HardPoints"/>
               <xsd:element type="xsd:string" name="CategoryMask"/>
               <xsd:element type="xsd:string" name="GUI_Model_Name"/>
-              <xsd:element type="xsd:short" name="GUI_Distance"/>
+              <xsd:element type="xsd:integer" name="GUI_Distance"/>
               <xsd:element type="xsd:string" name="GUI_Offset"/>
-              <xsd:element type="xsd:byte" name="GUI_Velocity"/>
+              <xsd:element type="xsd:integer" name="GUI_Velocity"/>
               <xsd:element type="xsd:string" name="Victory_Relevant"/>
               <xsd:element type="xsd:string" name="Has_Space_Evaluator"/>
               <xsd:element type="xsd:string" name="SFXEvent_Build_Started"/>
@@ -140,7 +364,13 @@
               <xsd:element type="xsd:string" name="SFXEvent_Health_Critical_Warning"/>
               <xsd:element type="xsd:string" name="Death_SFXEvent_Start_Die"/>
               <xsd:element type="xsd:string" name="Space_Full_Stop_Command"/>
-              <xsd:element type="xsd:string" name="Is_Visible_On_Radar"/>
+              <xsd:element type="xsd:string" name="Is_Visible_On_Radar">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets whether or not the unit is visible on radar.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:string" name="Radar_Icon_Name"/>
               <xsd:element type="xsd:string" name="Radar_Icon_Size"/>
               <xsd:element type="xsd:float" name="Radar_Icon_Scale_Land"/>
@@ -154,7 +384,7 @@
               <xsd:element name="Unit_Abilities_Data">
                 <xsd:annotation>
                   <xsd:documentation>
-                      List of activated abilities. Activated abilities are abilities that can be activated and deactivated.
+                    List of activated abilities. Activated abilities are abilities that can be activated and deactivated.
                   </xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
@@ -167,8 +397,8 @@
                         <xsd:sequence>
                           <xsd:element type="xsd:string" name="Type"/>
                           <xsd:element type="xsd:string" name="Mod_Multiplier"/>
-                          <xsd:element type="xsd:byte" name="Recharge_Seconds"/>
-                          <xsd:element type="xsd:byte" name="Expiration_Seconds"/>
+                          <xsd:element type="xsd:integer" name="Recharge_Seconds"/>
+                          <xsd:element type="xsd:integer" name="Expiration_Seconds"/>
                           <xsd:element type="xsd:string" name="Alternate_Name_Text"/>
                           <xsd:element type="xsd:string" name="Alternate_Description_Text"/>
                           <xsd:element type="xsd:string" name="Alternate_Icon_Name"/>
@@ -182,20 +412,50 @@
               <xsd:element name="Abilities">
                 <xsd:annotation>
                   <xsd:documentation>
-                      List of passiv abilities. Passiv abilities are abilities that are always activated or activate automatically.
+                    List of passiv abilities. Passiv abilities are abilities that are always activated or activate automatically.
                   </xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                   <xsd:sequence/>
                 </xsd:complexType>
               </xsd:element>
-              <xsd:element type="xsd:short" name="Score_Cost_Credits"/>
-              <xsd:element type="xsd:byte" name="Population_Value"/>
-              <xsd:element type="xsd:short" name="Custom_Hard_XExtent"/>
-              <xsd:element type="xsd:short" name="Tactical_Build_Cost_Multiplayer"/>
-              <xsd:element type="xsd:byte" name="Tactical_Build_Time_Seconds"/>
-              <xsd:element type="xsd:string" name="Tactical_Build_Prerequisites"/>
-              <xsd:element type="xsd:string" name="Tactical_Production_Queue"/>
+              <xsd:element type="xsd:integer" name="Score_Cost_Credits"/>
+              <xsd:element type="xsd:integer" name="Population_Value">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets how much of a population the unit takes up (fighters are normally 1). Can be set it to 0 for an unlimited number of the unit in a battle.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Custom_Hard_XExtent"/>
+              <xsd:element type="xsd:integer" name="Tactical_Build_Cost_Multiplayer">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Build cost in credits for tactical multiplayer.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:integer" name="Tactical_Build_Time_Seconds">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Build time in seconds for tactical multiplayer.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Tactical_Build_Prerequisites">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Build prerequsites for tactical multiplayer.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Tactical_Production_Queue">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Production queue for tactical multiplayer. For space units this is normally Tactical_Units.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:string" name="xxxsdpace_Model_Name"/>
               <xsd:element type="xsd:float" name="Death_Persistence_Duration"/>
               <xsd:element type="xsd:string" name="Remove_Upon_Death"/>
