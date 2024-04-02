@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>EaW XML Schemas</title>
+        <link rel='stylesheet' href='https://www.w3.org/StyleSheets/Core/Modern' type='text/css'>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>EaW XML Schemas</h1>
+        <h2>Installation</h2>
+        <p>At the root of your element, add the following code:</p>
+        <code><span style="color:blue">xmlns:xsi</span>=<span style="color: green">"http://www.w3.org/2001/XMLSchema"</span> <span style="color:blue">xsi:schemaLocation</span>=<span style="color: green">"https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA% https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd"</span></code>
+        <p>
+        <button onclick="copy()">Copy text</button>
+        <script>
+            function copy() { navigator.clipboard.writeText('xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA% https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd"') }
+        </script>
+        <p>Note: Replace <code>%SCHEMA%</code> with the name of the schema you need (see below for a selection).</p>
+        <h2>List of Schemas</h2>
+        <p>This is a list of all xml schemas that currently exist. More schemas will be added in the future.</p>
+        <ul>
+            <li><a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/space.xsd">Space</a></li>
+        </ul>
+    </body>
+</html>
