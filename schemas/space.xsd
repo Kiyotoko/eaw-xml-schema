@@ -14,7 +14,7 @@
               <xsd:element type="xsd:string" name="Encyclopedia_Text">
                 <xsd:annotation>
                   <xsd:documentation>
-                      The encyclopedia text.
+                    Sets the encyclopedia text.
                   </xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
@@ -22,22 +22,40 @@
               <xsd:element type="xsd:string" name="Encyclopedia_Good_Against">
                 <xsd:annotation>
                   <xsd:documentation>
-                      Defines which opponents this unit is good against (maximum of 3). Only tells the game what to display in your popup information window for "Good against" and "Vulnerable To".
+                    Sets which opponents this unit is good against (maximum of 3). Only tells the game what to display in your popup information window for "Good against" and "Vulnerable To".
                   </xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
               <xsd:element type="xsd:string" name="Encyclopedia_Vulnerable_To">
                 <xsd:annotation>
                   <xsd:documentation>
-                      Defines which opponents this unit is vulnerable to (maximum of 3). Only tells the game what to display in your popup information window for "Good against" and "Vulnerable To".
+                    Sets which opponents this unit is vulnerable to (maximum of 3). Only tells the game what to display in your popup information window for "Good against" and "Vulnerable To".
                   </xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
               <xsd:element type="xsd:integer" name="GUI_Row"/>
-              <xsd:element type="xsd:string" name="Space_Model_Name"/>
-              <xsd:element type="xsd:string" name="Icon_Name"/>
+              <xsd:element type="xsd:string" name="Space_Model_Name">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the .alo model name for this unit.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Icon_Name">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the .tga icon name for this unit.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:float" name="Select_Box_Scale"/>
-              <xsd:element type="xsd:float" name="Select_Box_Z_Adjust"/>
+              <xsd:element type="xsd:float" name="Select_Box_Z_Adjust">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the z axis adjustment aka. the height level adjustment for the model. This should be normally negative.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:float" name="Mass"/>
               <xsd:element type="xsd:float" name="Scale_Factor">
                 <xsd:annotation>
@@ -48,8 +66,20 @@
                 </xsd:annotation>
               </xsd:element>
               <xsd:element type="xsd:integer" name="Ranking_In_Category"/>
-              <xsd:element type="xsd:float" name="Dense_FOW_Reveal_Range_Multiplier"/>
-              <xsd:element type="xsd:float" name="Max_Speed"/>
+              <xsd:element type="xsd:float" name="Dense_FOW_Reveal_Range_Multiplier">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the reveal range of the fog of war in multiplayer. See Space_FOW_Reveal_Range for singleplayer.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:float" name="Max_Speed">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets how fast a unit can move.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:float" name="Max_Rate_Of_Turn">
                 <xsd:annotation>
                   <xsd:documentation>
@@ -113,7 +143,13 @@
               </xsd:element>
               <xsd:element type="xsd:integer" name="Energy_Capacity"/>
               <xsd:element type="xsd:integer" name="Energy_Refresh_Rate"/>
-              <xsd:element type="xsd:string" name="Affiliation"/>
+              <xsd:element type="xsd:string" name="Affiliation">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the faction affiliation for this unit. It takes a list of faction names separated by a comma. The valid faction names in the base game are: Pirates, Empire, Rebel
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:integer" name="Tech_Level">
                 <xsd:annotation>
                   <xsd:documentation>
@@ -210,8 +246,50 @@
                 </xsd:annotation>
               </xsd:element>
               <xsd:element type="xsd:integer" name="Size_Value"/>
-              <xsd:element type="xsd:string" name="Behavior"/>
-              <xsd:element type="xsd:string" name="SpaceBehavior"/>
+              <xsd:element type="xsd:string" name="Behavior">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the list of behaviors for this unit. The values are separated by a comma. Valid values in the base game are:
+
+                    - SELECTABLE = This unit can be selected.
+                    - DUMMY_STARSHIP
+                    - POWERED
+                    - SHIELDED
+                  </xsd:documentation>
+                </xsd:annotation>
+              <xsd:element type="xsd:string" name="SpaceBehavior">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the list of space behaviors for this unit. The values are separated by a comma. Valid values in the base game are:
+
+                    - TACTICAL_SUPER_WEAPON = This unit is a super weapon.
+                    - IDLE = This unit does nothing in battle. For example, the death star has idle as a behavior.
+                    - FIGHTER_LOCOMOTOR
+                    - SELECTABLE = This unit can be selected.
+                    - TARGETING
+                    - WEAPON = This unit has weapons.
+                    - HIDE_WHEN_FOGGED = This unit is hidden when it is inside the fog of war. Large unis like super weapons may not want to have this behavior.
+                    - AMBIENT_SFX
+                    - DAMAGE_TRACKING
+                    - NEBULA = This units abilities are suppressed inside a nebula aka. is effected by a nebula.
+                    - ABILITY_COUNTDOWN = This units abilities have a countdown and/or a cooldown.
+                    - SIMPLE_SPACE_LOCOMOTOR
+                    - REVEAL
+                    - UNIT_AI
+                    - ASTEROID_FIELD_DAMAGE = This unit can be damaged by asteroids.
+                    - SPAWN_SQUADRON = This unit can spawn squadrons.
+                    - DAMAGE_TRACKING
+                    - ION_STUN_EFFECT
+
+                    Note that space behaviours are a subset of common behaviours, see the Behaviour element. In theory you can load common behaviours inside this element, but just because you can does not mean you should. For example, you can load SHIELDED, which is a common behaviour, inside this list of space behaviours. It is recommended to split behaviours because it makes them more readable and is guaranteed to work where mixing different types of behaviours can lead to bugs and loading failures.
+                  </xsd:documentation>
+                </xsd:annotation>
+              <xsd:element type="xsd:string" name="In_Background">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets if this unit is only in the background. For example, this is the case for the death star. Default is no (Yes/No).
+                  </xsd:documentation>
+                </xsd:annotation>
               <xsd:element type="xsd:integer" name="Spawned_Squadron_Delay_Seconds">
                 <xsd:annotation>
                   <xsd:documentation>
@@ -328,7 +406,13 @@
                 </xsd:annotation>
               </xsd:element>
               <xsd:element type="xsd:string" name="Asteroid_Damage_Hit_Particles"/>
-              <xsd:element type="xsd:float" name="Space_FOW_Reveal_Range"/>
+              <xsd:element type="xsd:float" name="Space_FOW_Reveal_Range">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the reveal range of the fog of war. See Dense_FOW_Reveal_Range_Multiplier for multiplayer.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:float" name="Targeting_Max_Attack_Distance"/>
               <xsd:element type="xsd:string" name="Death_Explosions"/>
               <xsd:element type="xsd:string" name="Death_Clone"/>
@@ -340,34 +424,124 @@
               <xsd:element type="xsd:integer" name="GUI_Velocity"/>
               <xsd:element type="xsd:string" name="Victory_Relevant"/>
               <xsd:element type="xsd:string" name="Has_Space_Evaluator"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Build_Started"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Build_Cancelled"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Build_Complete"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Build_Started">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when this unit build started.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="SFXEvent_Build_Cancelled">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when this unit build was cancelled.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="SFXEvent_Build_Complete">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when this unit build is complete.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:string" name="SFXEvent_Ambient_Loop"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Select"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Move"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Select">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when this unit is selected.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="SFXEvent_Move">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when this unit moves. This is played only once when the move command was set for this unit. It is not the sound for the engine. You can set this sound at SFXEvent_Engine_Idle_Loop and SFXEvent_Engine_Moving_Loop.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:string" name="SFXEvent_Fleet_Move"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Attack"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Guard"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Stop"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Attack">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when this unit attacks another unit. This is triggered by the attack command.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="SFXEvent_Guard">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when this unit guards another unit. This is triggered by the guard command.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="SFXEvent_Stop">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when this unit stops. This is triggered by the stop command.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:string" name="SFXEvent_Barrage"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Move_Into_Asteroid_Field"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Move_Into_Nebula"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Damaged_By_Asteroid"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Move_Into_Asteroid_Field">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when this unit moves into an asteroid field.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="SFXEvent_Move_Into_Nebula">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when this unit moves into a nebula field.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="SFXEvent_Damaged_By_Asteroid">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when this unit is damaged by an asteroid field. This is commonly SFX_Asteroid_Detonation.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:string" name="SFXEvent_Bombard_Select_Target"/>
               <xsd:element type="xsd:string" name="SFXEvent_Bombard_Incoming"/>
               <xsd:element type="xsd:string" name="SFXEvent_Attack_Hardpoint"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Hardpoint_Destroyed"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Engine_Idle_Loop"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Engine_Moving_Loop"/>
+              <xsd:element type="xsd:string" name="SFXEvent_Hardpoint_Destroyed">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when a hardpoint of this unit is destroyed.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="SFXEvent_Engine_Idle_Loop">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played for the engine. The sound effect is looped and always played in idle, aka. if no action is performend.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="SFXEvent_Engine_Moving_Loop">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played for the engine when this unit moves.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:string" name="SFXEvent_Engine_Cinematic_Focus_Loop"/>
               <xsd:element type="xsd:string" name="SFXEvent_Health_Critical_Warning"/>
-              <xsd:element type="xsd:string" name="Death_SFXEvent_Start_Die"/>
+              <xsd:element type="xsd:string" name="Death_SFXEvent_Start_Die">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets the sound effect that is played when this unit gets destroyed.
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:string" name="Space_Full_Stop_Command"/>
               <xsd:element type="xsd:string" name="Is_Visible_On_Radar">
                 <xsd:annotation>
                   <xsd:documentation>
-                    Sets whether or not the unit is visible on radar.
+                    Sets whether or not the unit is visible on radar (Yes/No).
                   </xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
@@ -379,7 +553,13 @@
               <xsd:element type="xsd:float" name="Idle_Chase_Range"/>
               <xsd:element type="xsd:float" name="Attack_Move_Response_Range"/>
               <xsd:element type="xsd:float" name="Targeting_Stickiness_Time_Threshold"/>
-              <xsd:element type="xsd:string" name="Targeting_Priority_Set"/>
+              <xsd:element type="xsd:string" name="Targeting_Priority_Set">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets which type of enemies should be prioritized by this unit. For example, you can set this value to "Frigate" for always prioritizing frigates. Valid values in the base game are: Corvette, Frigate, Capital, Fighter, Bomber
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:string" name="Lua_Script"/>
               <xsd:element name="Unit_Abilities_Data">
                 <xsd:annotation>
@@ -458,7 +638,13 @@
               </xsd:element>
               <xsd:element type="xsd:string" name="xxxsdpace_Model_Name"/>
               <xsd:element type="xsd:float" name="Death_Persistence_Duration"/>
-              <xsd:element type="xsd:string" name="Remove_Upon_Death"/>
+              <xsd:element type="xsd:string" name="Remove_Upon_Death">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Sets if this unit should be directly removed upon death (true/false).
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
             </xsd:choice>
           </xsd:complexType>
         </xsd:element>
