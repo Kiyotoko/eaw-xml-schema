@@ -1,7 +1,12 @@
 <h1 align=center>EaW XML Schema</h1>
 
 <p align=center>
-    <img src="shields.io/">
+    <a href="https://github.com/Kiyotoko/eaw-xml-schema/actions/workflows/static.yml">
+    <img alt="Deploy static content to Pages" src="https://github.com/Kiyotoko/eaw-xml-schema/actions/workflows/static.yml/badge.svg">
+    </a>
+    <img alt="Static Badge" src="https://img.shields.io/badge/game-Star_Wars%3A_Empire_at_War-blue">
+    <img alt="GitHub License" src="https://img.shields.io/github/license/Kiyotoko/eaw-xml-schema">
+    <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/Kiyotoko/eaw-xml-schema">
 </p>
 
 Defines common xml schemas for Empire at War modding.
