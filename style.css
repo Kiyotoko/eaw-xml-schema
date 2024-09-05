@@ -1,0 +1,31 @@
+body {
+    font-family: Helvetica, serif;
+}
+
+main {
+    width: 800px;
+    margin: 30px calc(50% - 400px) 30px calc(50% - 400px);
+}
+
+.keyword {
+    color: blue
+}
+
+.string {
+    color: green;
+}
+
+.wrapper {
+    color: white;
+    background-color: #666666;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1, h2 {
+    border-bottom: 2px solid black;
+}
