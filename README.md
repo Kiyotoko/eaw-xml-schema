@@ -1,15 +1,14 @@
-<h1 align=center>EaW XML Schema</h1>
-
-<p align=center>
-    <a href="https://github.com/Kiyotoko/eaw-xml-schema/actions/workflows/static.yml">
-    <img alt="Deploy static content to Pages" src="https://github.com/Kiyotoko/eaw-xml-schema/actions/workflows/static.yml/badge.svg">
-    </a>
-    <img alt="Static Badge" src="https://img.shields.io/badge/game-Star_Wars%3A_Empire_at_War-blue">
-    <img alt="GitHub License" src="https://img.shields.io/github/license/Kiyotoko/eaw-xml-schema">
-    <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/Kiyotoko/eaw-xml-schema">
-</p>
-
-Defines common xml schemas for Empire at War modding.
+<div align="center">
+    <h1>EaW XML Schema</h1>
+    <!-- Badges -->
+    <div>
+        <img alt="Deploy static content to Pages" src="https://github.com/Kiyotoko/eaw-xml-schema/actions/workflows/static.yml/badge.svg">
+        <img alt="Static Badge" src="https://img.shields.io/badge/game-Star_Wars%3A_Empire_at_War-blue">
+        <img alt="GitHub License" src="https://img.shields.io/github/license/Kiyotoko/eaw-xml-schema">
+        <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/Kiyotoko/eaw-xml-schema">
+    </div>
+    <i>Defines common xml schemas for Empire at War modding.</i>
+</div>
 
 ## Idea
 
@@ -20,7 +19,10 @@ XML schemas are used to define and document elements. This project contains mult
 At the root of your element, add the following attributes:
 
 ```xml
-<root xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA% https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd">
+<root
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+    xsi:schemaLocation="https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%
+    https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd">
     ...
 </root>
 ```
