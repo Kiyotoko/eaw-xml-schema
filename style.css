@@ -24,8 +24,13 @@ main {
 
 h1 {
     text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 3cm;
+    border-bottom: 4px solid black;
 }
 
-h1, h2 {
+h2 {
     border-bottom: 2px solid black;
+    width: 70%;
 }
