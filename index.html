@@ -1,38 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>EaW XML Schemas</title>
-        <link rel="stylesheet" href="style.css" type="text/css">
-        <meta charset="UTF-8">
-    </head>
-    <body>
-        <main>
-            <h1 class="title">EaW XML Schemas</h1>
+
+<head>
+    <title>EaW XML Schemas</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script src="events.js"></script>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <main>
+        <h1>EaW XML Schemas</h1>
+
+        <div class="part">
             <h2>Idea</h2>
-            <p>XML schemas are used to define and document elements. This project contains multiple schemas for different xml data structures in the game Star Wars: Empire at War. These should help new people to find their way around. As there is not much information easily available online outside of the wiki, these can be particularly helpful for elements that are not self-explanatory.</p>
+            <p>
+                XML schemas are used to define and document elements. This project
+                contains multiple schemas for different xml data structures in the
+                game Star Wars: Empire at War. These should help new people to find
+                their way around. As there is not much information easily available
+                online outside of the wiki, these can be particularly helpful for
+                elements that are not self-explanatory.
+            </p>
+        </div>
+
+        <div class="part">
             <h2>Usage</h2>
             <p>At the root of your element, add the following attributes:</p>
-            <div class="wrapper">
-                <code class="code">xmlns:xsi="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA% https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd"</code>
+            <div class="code-box">
+                <button id="copy" onclick="copy()">Copy text</button>
+                <div class="code-wrappper">
+                    <p class="code">
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+                        xsi:schemaLocation="https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%
+                        https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd"
+                    </p>
+                </div>
             </div>
-            <script src="events.js">
-                console.log("Called!")
-                styleAll()
-            </script>
-            <button onclick="copy()">Copy text</button>
-            <p>Note: Replace <code>%SCHEMA%</code> with the name of the schema you need (see below for a selection).</p>
+            <p style="color: rgb(188, 84, 84);">
+                Note: Replace <code class="code-paragraph">%SCHEMA%</code> with the name of the schema you
+                need (see below for a selection).
+            </p>
+        </div>
+
+        <div class="part">
             <h2>List of Schemas</h2>
-            <p>This is a list of all xml schemas that currently exist. More schemas will be added in the future.</p>
+            <p>
+                This is a list of all xml schemas that currently exist. More schemas
+                will be added in the future.
+            </p>
             <ul>
-                <li><a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/ground.xsd">Ground</a></li>
-                <li><a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/hardpoints.xsd">Hardpoints</a></li>
-                <li><a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/planets.xsd">Planets</a></li>
-                <li><a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/projectiles.xsd">Projectiles</a></li>
-                <li><a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/space.xsd">Space</a></li>
-                <li><a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/starbases.xsd">Starbases</a></li>
-                <li><a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/trades.xsd">Trades</a></li>
-                <li><a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/upgrades.xsd">Upgrades</a></li>
+                <li>
+                    <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/ground.xsd" target="_blank">Ground</a>
+                </li>
+                <li>
+                    <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/hardpoints.xsd" target="_blank">Hardpoints</a>
+                </li>
+                <li>
+                    <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/planets.xsd" target="_blank">Planets</a>
+                </li>
+                <li>
+                    <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/projectiles.xsd" target="_blank">Projectiles</a>
+                </li>
+                <li>
+                    <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/space.xsd" target="_blank">Space</a>
+                </li>
+                <li>
+                    <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/starbases.xsd" target="_blank">Starbases</a>
+                </li>
+                <li>
+                    <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/trades.xsd" target="_blank">Trades</a>
+                </li>
+                <li>
+                    <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/upgrades.xsd" target="_blank">Upgrades</a>
+                </li>
             </ul>
-        </main>
-    </body>
+        </div>
+    </main>
+</body>
+
 </html>
