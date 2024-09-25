@@ -126,7 +126,7 @@ button:active {
     z-index: 1;
 }
 
-.code {
+.prettyprint {
     -webkit-user-select: all;
     user-select: all;
     margin: 0;
