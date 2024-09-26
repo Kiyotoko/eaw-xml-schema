@@ -38,7 +38,7 @@ h1 {
 
 h2 {
     border-bottom: 2px solid var(--text-color);
-    width: 20vw;
+    width: 34vw;
 }
 
 a {
@@ -116,12 +116,14 @@ section {
     background-color: var(--code-box-background-color-hover);
 }
 
+/* Code wrapper wraps a code block. */
 .code-wrappper {
     background-color: var(--code-background-color);
     padding: 8px;
     z-index: 1;
 }
 
+/* Code paragraphs are used to style a single line of inline code. */
 .code-paragraph {
     -webkit-user-select: all;
     user-select: all;
@@ -138,7 +140,7 @@ section {
     padding: 0;
 }
 
-/* */
+/* Callouts are  */
 .callout {
     padding: 5px;
     margin: 5px;
@@ -156,7 +158,15 @@ section {
         width: 95%;
     }
 
-    .code-wrappper {
+    .code-box {
         width: 95%;
+    }
+
+    h1 {
+        width: 80%;
+    }
+
+    h2 {
+        width: 55%;
     }
 }
