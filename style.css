@@ -91,6 +91,18 @@ section {
     width: 60vw;
 }
 
+blockquote {
+    padding: 5px;
+    margin: 5px;
+    border-left: thick solid var(--callout-border-color);
+    background-color: var(--callout-background-color);
+    width: 60vw;
+}
+
+blockquote.p {
+    text-align: left;
+}
+
 .code-box {
     display: flex;
     flex-direction: column;
@@ -140,21 +152,20 @@ section {
     padding: 0;
 }
 
-/* Callouts are  */
-.callout {
-    padding: 5px;
-    margin: 5px;
-    border-left: thick solid var(--callout-border-color);
-    background-color: var(--callout-background-color);
-    width: 60vw;
-}
+@media (max-width: 900px) {
+    body {
+        font-size: larger;
+    }
 
-@media only screen and (max-width: 900px) {
+    button {
+        font-size: larger;
+    }
+    
     section {
         width: 95%
     }
 
-    .callout {
+    blockquote {
         width: 95%;
     }
 
