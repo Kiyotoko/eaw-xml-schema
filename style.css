@@ -14,7 +14,6 @@
 
 body {
     font-family: Helvetica, serif;
-    font-size: 1.2em;
     color: var(--text-color);
     background-color: var(--background-color);
 }
@@ -32,12 +31,14 @@ main {
 
 h1 {
     border-bottom: 4px solid rgba(255, 255, 255, 0.87);
+    font-size: xx-large;
     text-align: center;
     width: 50vw;
 }
 
 h2 {
     border-bottom: 2px solid var(--text-color);
+    font-size: x-large;
     width: 34vw;
 }
 
@@ -53,6 +54,7 @@ a:hover {
 
 p {
     text-align: justify;
+    font-size: large;
 }
 
 ul {
@@ -60,7 +62,7 @@ ul {
 }
 
 button {
-    font-size: 0.9em;
+    font-size: medium;
     border: none;
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0);
@@ -91,18 +93,18 @@ section {
     width: 60vw;
 }
 
+/* Blockquotes are used for callouts. */
 blockquote {
     padding: 5px;
     margin: 5px;
     border-left: thick solid var(--callout-border-color);
     background-color: var(--callout-background-color);
     width: 60vw;
-}
-
-blockquote.p {
     text-align: left;
+    font-size: medium;
 }
 
+/* The code box around a code wrapper. */
 .code-box {
     display: flex;
     flex-direction: column;
@@ -131,6 +133,7 @@ blockquote.p {
 /* Code wrapper wraps a code block. */
 .code-wrappper {
     background-color: var(--code-background-color);
+    font-size: medium;
     padding: 8px;
     z-index: 1;
 }
@@ -153,14 +156,6 @@ blockquote.p {
 }
 
 @media (max-width: 900px) {
-    body {
-        font-size: larger;
-    }
-
-    button {
-        font-size: larger;
-    }
-    
     section {
         width: 95%
     }
