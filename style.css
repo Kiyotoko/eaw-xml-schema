@@ -2,14 +2,15 @@
     --background-color: #1d2a35;
     --code-box-background-color: #38444d;
     --code-box-background-color-hover: #3c3c3c;
-    --code-background-color: rgb(21, 32, 43);
+    --code-background-color: rgb(25, 38, 51);
+    --callout-background-color: #757533fa;
+    --callout-border-color: orange;
     --text-color: #ddd;
     --text-color-hover: #7d7c7c;
-    --code-text-color: rgb(218, 186, 83);
     --button-text-color: white;
 
     text-rendering: optimizeLegibility;
-}
+} 
 
 body {
     font-family: Helvetica, serif;
@@ -33,33 +34,29 @@ h1 {
     border-bottom: 4px solid rgba(255, 255, 255, 0.87);
     text-align: center;
     width: 50vw;
-    transition: font-size 0.5s;
 }
 
 h2 {
     border-bottom: 2px solid var(--text-color);
     width: 20vw;
-    transition: font-size 0.5s;
-}
-
-h1:hover {
-    font-size: 2.2em;
-}
-
-h2:hover {
-    font-size: 1.7em;
 }
 
 a {
     color: var(--text-color);
     text-decoration: none;
-    transition: 0.5s;
 }
 
 a:hover {
-    font-size: 1.2em;
     color: var(--text-color-hover);
     border-bottom: 2px solid var(--text-color-hover);
+}
+
+p {
+    text-align: justify;
+}
+
+ul {
+    list-style-type: circle;
 }
 
 button {
@@ -90,7 +87,7 @@ button:active {
     transition: 0s;
 }
 
-.part {
+section {
     width: 60vw;
 }
 
@@ -111,7 +108,7 @@ button:active {
 
     color: var(--text-color);
     background-color: var(--code-box-background-color);
-    width: 50vw;
+    width: 60vw;
     transition: background-color 0.5s;
 }
 
@@ -120,12 +117,20 @@ button:active {
 }
 
 .code-wrappper {
-    color: var(--code-text-color);
     background-color: var(--code-background-color);
     padding: 8px;
     z-index: 1;
 }
 
+.code-paragraph {
+    -webkit-user-select: all;
+    user-select: all;
+    margin: 0;
+    padding: 2px;
+    background-color: var(--code-background-color);
+}
+
+/* Googles code styling library */
 .prettyprint {
     -webkit-user-select: all;
     user-select: all;
@@ -133,11 +138,25 @@ button:active {
     padding: 0;
 }
 
-.code-paragraph {
-    -webkit-user-select: all;
-    user-select: all;
-    margin: 0;
-    padding: 0;
-    background-color: var(--code-background-color);
-    color: var(--code-text-color);
+/* */
+.callout {
+    padding: 5px;
+    margin: 5px;
+    border-left: thick solid var(--callout-border-color);
+    background-color: var(--callout-background-color);
+    width: 60vw;
+}
+
+@media only screen and (max-width: 900px) {
+    section {
+        width: 95%
+    }
+
+    .callout {
+        width: 95%;
+    }
+
+    .code-wrappper {
+        width: 95%;
+    }
 }
