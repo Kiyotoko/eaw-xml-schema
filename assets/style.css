@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'SpaceMono';
+    src: url(font/SpaceMono-Regular.eot);
+    src: url(font/SpaceMono-Regular.woff) format('woff'), url(font/SpaceMono-Regular.ttf) format('truetype');
+}
+
+:root {
+    --primary: #5a5a5a;
+    --secondary: #fefefe;
+    --accent: #cfcfcf;
+}
+
+body {
+    font-family: "SpaceMono", monospace;
+    font-size: large;
+    color: var(--primary);
+    background-color: var(--secondary);
+    margin: 0:
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary);
+    margin: 0;
+    padding: 15px 20% 15px 20%;
+    z-index: 1;
+}
+
+nav > div {
+    display: grid;
+    grid-template: repeat(1, 1fr) / repeat(4, 1fr);
+    gap: 12px;
+}
+
+nav > div > a {
+    border: 5px var(--accent) dotted;
+    padding: 5px;
+    text-align: center;
+    color: var(--accent);
+    font-size: 22px;
+    text-transform: lowercase;
+}
+
+main {
+    margin: 5% 20% 5% 20%;
+}
+
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 48px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+p {
+    text-align: justify;
+}
+
+a {
+    color: var(--primary);
+}
+
+ul {
+    list-style-type: disclosure-closed;
+}
+
+.container {
+    position: relative;
+}
+
+.container {
+    background-color: var(--accent);
+    padding: 5px;
+    border-radius: 10px;
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+}
+
+.container > button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 4px;
+}
+
+blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 4px;
+    background-color: #ef8b9b;
+    border-radius: 10px 0 10px 0;
+}
+
+@media (max-width: 900px) {
+    body {
+        margin: 5%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary: #fefefe;
+        --secondary: #5a5a5a;
+    }
+}
