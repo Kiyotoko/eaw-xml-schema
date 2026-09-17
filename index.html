@@ -44,7 +44,11 @@
                     xsi:schemaLocation="https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%
                     https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd"
                 </code>
-                <button onclick="copy()">Copy</button>
+                <button onclick='navigator.clipboard.writeText(
+                   `xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+                    xsi:schemaLocation="https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%
+                    https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd"`
+                )'>Copy</button>
             </div>
             <blockquote>
                 Replace <code>%SCHEMA%</code> with the name of the schema you need (see below for a selection).
