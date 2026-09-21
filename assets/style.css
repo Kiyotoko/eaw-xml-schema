@@ -7,7 +7,6 @@
 :root {
     --primary: #5a5a5a;
     --secondary: #fefefe;
-    --accent: #cfcfcf;
 }
 
 body {
@@ -15,7 +14,7 @@ body {
     font-size: large;
     color: var(--primary);
     background-color: var(--secondary);
-    margin: 0;
+    margin: 5% 20% 5% 20%;
 }
 
 body::-webkit-scrollbar {
@@ -23,33 +22,22 @@ body::-webkit-scrollbar {
 }
 
 nav {
-    position: sticky;
-    top: 0;
-    background-color: var(--primary);
-    margin: 0;
-    padding: 15px 20% 15px 20%;
-    z-index: 1;
-    box-shadow: 2px 2px 2px 2px #767676;
-    border-radius: 15px;
-}
-
-nav > div {
     display: grid;
-    grid-template: repeat(1, 1fr) / repeat(4, 1fr);
-    gap: 12px;
+    grid-template: repeat(1, 1fr) / repeat(3, 1fr);
+    gap: 60px;
+    width: 100%;
 }
 
-nav > div > a {
-    border: 5px var(--accent) dotted;
-    padding: 5px;
+nav > a {
+    background: #f2f6f7;
+    background: linear-gradient(115deg, rgba(210, 210, 255, 1) 38%, rgba(110, 110, 255, 1) 100%);
+    border-radius: 20px;
+    padding: 3px;
     text-align: center;
-    color: var(--accent);
-    font-size: 22px;
+    color: var(--primary);
+    font-size: 20px;
+    font-weight: 900;
     text-transform: lowercase;
-}
-
-main {
-    margin: 5% 20% 5% 20%;
 }
 
 h1, h2 {
@@ -58,11 +46,13 @@ h1, h2 {
 
 h1 {
     font-size: 48px;
+    font-weight: 900;
     text-align: center;
 }
 
 h2 {
     font-size: 32px;
+    font-weight: 900;
 }
 
 p {
@@ -82,31 +72,61 @@ ul {
 }
 
 .container {
-    background-color: var(--accent);
-    padding: 5px;
-    border-radius: 10px;
+    background-color: #eee;
+    padding: 8px;
+    border-radius: 12px;
     text-wrap: wrap;
     overflow-wrap: break-word;
 }
 
 .container > button {
+    color: pink;
+    border: none;
+    background: none;
     position: absolute;
     right: 0;
     top: 0;
     margin: 4px;
 }
 
+.container > button:hover {
+    scale: 1.1;
+    transition-duration: 0.4s;
+    transition-property: scale;
+}
+
 blockquote {
     margin-left: 0;
     margin-right: 0;
-    padding: 4px;
-    background-color: #ef8b9b;
-    border-radius: 10px 0 10px 0;
+    padding: 8px;
+    background-color: #efbfbf;
+    border-radius: 12px 0 12px 0;
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
     body {
         margin: 5%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 20px;
+    }
+    
+    nav > div {
+        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 300px) {
+    body {
+        font-size: 24px;
+        margin: 4px;
+    }
+    
+    nav > div {
+            grid-template: repeat(4, 1fr) / repeat(1, 1fr);
     }
 }
 
