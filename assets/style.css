@@ -36,8 +36,7 @@ nav {
 }
 
 nav > a {
-    background: #f2f6f7;
-    background: linear-gradient(115deg, rgba(210, 210, 255, 1) 38%, rgba(110, 110, 255, 1) 100%);
+    background: color-mix(var(--primary) 20%, var(--secondary) 80%);
     border-radius: 20px;
     padding: 3px;
     text-align: center;
@@ -140,12 +139,7 @@ blockquote {
 @media (prefers-color-scheme: dark) {
     :root {
         --primary: #fefefe;
-        --secondary: #5a5a5a;
-        --accent: #9f9f9f;
-    }
-
-    nav {
-        background-color: #464646;
+        --secondary: #3a3a3a;
     }
 
     blockquote {
