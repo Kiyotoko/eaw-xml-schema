@@ -18,7 +18,7 @@
 
 body {
     font-family: "SpaceMono", monospace;
-    font-size: large;
+    font-size: 18px;
     color: var(--primary);
     background-color: var(--secondary);
     margin: 5% 20% 5% 20%;
@@ -73,11 +73,11 @@ ul {
     list-style-type: disclosure-closed;
 }
 
-.container {
+.code-block, .callout {
     position: relative;
 }
 
-.container {
+.code-block {
     background-color: #eee;
     padding: 8px;
     border-radius: 12px;
@@ -85,7 +85,7 @@ ul {
     overflow-wrap: break-word;
 }
 
-.container > button {
+.code-block > button {
     color: pink;
     border: none;
     background: none;
@@ -95,54 +95,65 @@ ul {
     margin: 4px;
 }
 
-.container > button:hover {
+.code-block > button:hover {
     scale: 1.1;
     transition-duration: 0.4s;
     transition-property: scale;
 }
 
-blockquote {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 8px;
+.callout {
+    margin-top: 1cm;
+}
+
+.callout > * {
     background-color: #efbfbf;
     border-radius: 12px 0 12px 0;
 }
 
-@media screen and (max-width: 900px) {
-    body {
-        margin: 5%;
-    }
+.callout > blockquote {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 8px;
 }
 
-@media screen and (max-width: 600px) {
-    body {
-        font-size: 20px;
-    }
-    
-    nav > div {
-        grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-    }
+.callout > div {
+    width: unset;
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    margin: 6px;
+    position: absolute;
+    border: 2px var(--secondary) solid;
+    top: -28px;
+    left: 42.5%;
+    right: 42.5%;
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 1080px) {
     body {
         font-size: 24px;
-        margin: 4px;
+        margin: 1cm 20% 1cm 20%;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    body {
+        font-size: 24px;
+        margin: 0.5cm 5% 0.5cm 5%;
     }
     
     nav > div {
-            grid-template: repeat(4, 1fr) / repeat(1, 1fr);
+        grid-template: repeat(1, 1fr) / repeat(3, 1fr);
     }
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --primary: #fefefe;
-        --secondary: #3a3a3a;
+        --secondary: #2a2a2a;
     }
 
-    blockquote {
+    .callout > * {
         background-color: #af4b5b;
     }
 }
