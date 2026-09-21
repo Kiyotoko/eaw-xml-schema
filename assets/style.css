@@ -4,6 +4,13 @@
     src: url(font/SpaceMono-Regular.woff) format('woff'), url(font/SpaceMono-Regular.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: 'DistantGalaxy';
+    src: url('font/DistantGalaxy-Alternate.woff2') format('woff2'), url('font/DistantGalaxy-Alternate.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --primary: #5a5a5a;
     --secondary: #fefefe;
@@ -41,7 +48,7 @@ nav > a {
 }
 
 h1, h2 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "DistantGalaxy", 'Times New Roman', Times, serif;
 }
 
 h1 {
