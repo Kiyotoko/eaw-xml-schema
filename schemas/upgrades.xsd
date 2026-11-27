@@ -1,57 +1,135 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+  elementFormDefault="qualified"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+  vc:minVersion="1.1">
+  <xsd:include schemaLocation="eaw-types.xsd"/>
   <xsd:element name="UpgradeObjects">
     <xsd:complexType>
       <xsd:sequence>
         <xsd:element name="UpgradeObject" maxOccurs="unbounded" minOccurs="0">
           <xsd:complexType>
-            <xsd:sequence>
-              <xsd:element type="xsd:string" name="Behavior"/>
-              <xsd:element type="xsd:string" name="Affiliation"/>
-              <xsd:element type="xsd:float" name="Tactical_Build_Cost_Multiplayer"/>
-              <xsd:element type="xsd:short" name="Tactical_Build_Cost_Campaign"/>
-              <xsd:element type="xsd:float" name="Tactical_Build_Time_Seconds"/>
-              <xsd:element type="xsd:string" name="Tactical_Build_Prerequisites"/>
-              <xsd:element type="xsd:string" name="Tactical_Production_Queue"/>
-              <xsd:element type="xsd:byte" name="Build_Limit_Current_For_All_Allies"/>
-              <xsd:element type="xsd:string" name="Previous_Upgrade_Level_Type"/>
-              <xsd:element type="xsd:string" name="Next_Upgrade_Level_Type"/>
-              <xsd:element type="xsd:string" name="Show_In_Sidebar_While_Building"/>
-              <xsd:element type="xsd:string" name="Show_In_Sidebar_When_Complete"/>
-              <xsd:element type="xsd:string" name="Icon_Name"/>
-              <xsd:element type="xsd:string" name="Encyclopedia_Text"/>
-              <xsd:element type="xsd:string" name="Encyclopedia_Unit_Class" minOccurs="0"/>
-              <xsd:element type="xsd:string" name="Text_ID"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Build_Started"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Build_Cancelled"/>
-              <xsd:element type="xsd:string" name="SFXEvent_Build_Complete"/>
+            <xsd:all>
+              <xsd:element type="Identifier" name="Variant_Of_Existing_Type" minOccurs="0" />
+              <xsd:element type="IdentifierList" name="Behavior" minOccurs="0" />
+              <xsd:element type="IdentifierList" name="Affiliation" minOccurs="0" />
+              <xsd:element type="xsd:float" name="Tactical_Build_Cost_Multiplayer" minOccurs="0" />
+              <xsd:element type="xsd:short" name="Tactical_Build_Cost_Campaign" minOccurs="0" />
+              <xsd:element type="xsd:float" name="Tactical_Build_Time_Seconds" minOccurs="0" />
+              <xsd:element type="IdentifierList" name="Tactical_Build_Prerequisites" minOccurs="0" />
+              <xsd:element type="YesNo" name="Tactical_Build_Increments_Tech_Level" minOccurs="0" />
+              <xsd:element type="YesNo" name="Tactical_Destruction_Decrements_Tech_Level" minOccurs="0" />
+              <xsd:element type="Identifier" name="Tactical_Production_Queue" minOccurs="0" />
+              <xsd:element type="Identifier" name="Previous_Upgrade_Level_Type" minOccurs="0" />
+              <xsd:element type="Identifier" name="Next_Upgrade_Level_Type" minOccurs="0" />
+              <xsd:element type="YesNo" name="Destroy_Previous_Upgrade_Level" minOccurs="0" />
+              <xsd:element type="Identifier" name="Show_In_Sidebar_While_Building" minOccurs="0" />
+              <xsd:element type="Identifier" name="Show_In_Sidebar_When_Complete" minOccurs="0" />
+              <xsd:element type="TgaImage" name="Icon_Name" minOccurs="0" />
+              <xsd:element type="xsd:boolean" name="Is_Skirmish_Tactical_Super_Weapon" minOccurs="0" />
+              <xsd:element type="Identifier" name="Encyclopedia_Text" minOccurs="0" />
+              <xsd:element type="Identifier" name="Encyclopedia_Unit_Class" minOccurs="0" />
+              <xsd:element type="Identifier" name="Text_ID" minOccurs="0" />
+              <xsd:element type="Identifier" name="SFXEvent_Build_Started" minOccurs="0" />
+              <xsd:element type="Identifier" name="SFXEvent_Build_Cancelled" minOccurs="0" />
+              <xsd:element type="Identifier" name="SFXEvent_Build_Complete" minOccurs="0" />
+              <xsd:element type="Identifier" name="SFXEvent_Special_Weapon_Ready" minOccurs="0" />
+              
+              <xsd:element type="Identifier" name="CategoryMask" minOccurs="0" />
+              <xsd:element type="xsd:byte" name="Build_Limit_Current_For_All_Allies" minOccurs="0" />
+              <xsd:element type="xsd:byte" name="Build_Limit_Current_Per_Player" minOccurs="0" />
               <xsd:element name="Abilities" minOccurs="0">
                 <xsd:complexType>
                   <xsd:sequence>
-                    <xsd:element name="Combat_Bonus_Ability">
+                    <xsd:element name="Combat_Bonus_Ability" minOccurs="0" maxOccurs="unbounded">
                       <xsd:complexType>
                         <xsd:sequence>
-                          <xsd:element type="xsd:string" name="Activation_Style"/>
-                          <xsd:element type="xsd:string" name="Applicable_Unit_Categories"/>
-                          <xsd:element type="xsd:string" name="Applicable_Unit_Types"/>
-                          <xsd:element type="xsd:float" name="Health_Bonus_Percentage"/>
-                          <xsd:element type="xsd:float" name="Damage_Bonus_Percentage"/>
-                          <xsd:element type="xsd:float" name="Energy_Pool_Bonus_Percentage"/>
-                          <xsd:element type="xsd:float" name="Shield_Bonus_Percentage"/>
-                          <xsd:element type="xsd:float" name="Defense_Bonus_Percentage"/>
-                          <xsd:element type="xsd:float" name="Movement_Speed_Bonus_Percentage"/>
-                          <xsd:element type="xsd:byte" name="Stacking_Category"/>
+                          <xsd:element type="Identifier" name="Activation_Style" />
+                          <xsd:element type="Identifier" name="Applicable_Unit_Categories" />
+                          <xsd:element type="IdentifierList" name="Applicable_Unit_Types" />
+                          <xsd:element type="xsd:float" name="Health_Bonus_Percentage" />
+                          <xsd:element type="xsd:float" name="Damage_Bonus_Percentage" />
+                          <xsd:element type="xsd:float" name="Energy_Pool_Bonus_Percentage" />
+                          <xsd:element type="xsd:float" name="Shield_Bonus_Percentage" />
+                          <xsd:element type="xsd:float" name="Defense_Bonus_Percentage" />
+                          <xsd:element type="xsd:float" name="Movement_Speed_Bonus_Percentage" />
+                          <xsd:element type="xsd:byte" name="Stacking_Category" />
                         </xsd:sequence>
-                        <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+                        <xsd:attribute type="Identifier" name="Name" use="optional" />
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="Income_Stream_Mod_Ability" minOccurs="0">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element type="xsd:float" name="Income_Multiplier" />
+                          <xsd:element type="xsd:float" name="Income_Additive_Value" />
+                          <xsd:element type="xsd:float" name="Interval_Multiplier" />
+                          <xsd:element type="xsd:int" name="Stacking_Category" />
+                          <xsd:element type="Identifier" name="Target_Stream_Source" />
+                          <xsd:element type="YesNo" name="Affects_All_Allied_Sources"/>
+                          <xsd:element type="YesNo" name="Reverse_Application_Logic"/>
+                        </xsd:sequence>
+                        <xsd:attribute type="Identifier" name="Name" />
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="Battlefield_Modifier_Ability" minOccurs="0">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element type="Identifier" name="Activation_Style" />
+                          <xsd:element type="YesNo" name="Enable_Special_Weapons" minOccurs="0" />
+                          <xsd:element type="YesNo" name="Enable_Bombing_Runs" minOccurs="0" />
+                          <xsd:element type="YesNo" name="Base_Shield_Upgrade" minOccurs="0" />
+                          <xsd:element type="YesNo" name="Apply_To_All_Allies" />
+                          <xsd:element type="xsd:byte" name="Stacking_Category" />
+                        </xsd:sequence>
+                        <xsd:attribute type="Identifier" name="Name" />
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="Garrison_Upgrade_Ability" minOccurs="0">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element type="Identifier" name="Activation_Style" />
+                          <xsd:element type="YesNo" name="Apply_To_All_Allies" />
+                          <xsd:element type="IdentifierList" name="Additional_Garrison_Units" />
+                        </xsd:sequence>
+                        <xsd:attribute type="Identifier" name="Name" />
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="Weatherproof_Ability" minOccurs="0">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element type="Identifier" name="Activation_Style" />
+                          <xsd:element type="YesNo" name="Apply_To_All_Allies" />
+                        </xsd:sequence>
+                        <xsd:attribute type="Identifier" name="Name" />
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="Enable_Ability" minOccurs="0">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element type="Identifier" name="Ability_Name" />
+                          <xsd:element type="Identifier" name="Applicable_Unit_Categories" />
+                          <xsd:element type="IdentifierList" name="Applicable_Unit_Types" />
+                          <xsd:element type="YesNo" name="Affects_All_Allies" />
+                        </xsd:sequence>
+                        <xsd:attribute type="Identifier" name="Name" />
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="Starbase_Upgrade_Ability" minOccurs="0">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element type="Identifier" name="Activation_Style" />
+                        </xsd:sequence>
+                        <xsd:attribute type="Identifier" name="Name" />
                       </xsd:complexType>
                     </xsd:element>
                   </xsd:sequence>
-                  <xsd:attribute type="xsd:string" name="SubObjectList" use="optional"/>
+                  <xsd:attribute type="Identifier" name="SubObjectList" use="optional" />
                 </xsd:complexType>
               </xsd:element>
-              <xsd:element type="xsd:string" name="CategoryMask"/>
-            </xsd:sequence>
-            <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+            </xsd:all>
+            <xsd:attribute type="Identifier" name="Name" use="optional" />
           </xsd:complexType>
         </xsd:element>
       </xsd:sequence>
