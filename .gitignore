@@ -5,3 +5,6 @@ build/
 
 # ide settings
 .vscode/
+
+# node.js
+node_modules/

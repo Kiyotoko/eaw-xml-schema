@@ -1,0 +1,14 @@
+{
+  "name": "eaw-xml-schema",
+  "version": "0.1.0",
+  "description": "Defines common xml schemas for Empire at War modding.",
+  "repository": "https://github.com/Kiyotoko/eaw-xml-schema.git",
+  "author": "karlz <karl.zschiebsch@posteo.com>",
+  "license": "MIT",
+  "scripts": {
+    "fmt": "prettier --write docs/**/*.md"
+  },
+  "devDependencies": {
+    "prettier": "^3.10.1"
+  }
+}

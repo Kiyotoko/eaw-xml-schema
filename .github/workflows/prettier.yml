@@ -17,7 +17,4 @@ jobs:
         run: |
           yarn
           yarn prettier --write --log-level log -c docs/**/*.md
-          if git diff --cached --quiet; then
-            echo "Some files are unformatted."
-            exit 1
-          fi
+          git diff --exit-code docs
