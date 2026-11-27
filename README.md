@@ -1,43 +1,38 @@
 <div align="center">
     <h1>EaW XML Schema</h1>
-    <!-- Badges -->
-    <div>
-        <img alt="Deploy static content to Pages" src="https://github.com/Kiyotoko/eaw-xml-schema/actions/workflows/static.yml/badge.svg">
-        <img alt="Static Badge" src="https://img.shields.io/badge/game-Star_Wars%3A_Empire_at_War-blue">
-        <img alt="GitHub License" src="https://img.shields.io/github/license/Kiyotoko/eaw-xml-schema">
-        <img alt="GitHub Issues or Pull Requests" src="https://img.shields.io/github/issues/Kiyotoko/eaw-xml-schema">
-    </div>
     <i>Defines common xml schemas for Empire at War modding.</i>
 </div>
 
-## Idea
+## Why?
 
-XML schemas are used to define and document elements. This project contains multiple schemas for different xml data structures in the game Star Wars: Empire at War. These should help new people to find their way around. As there is not much information easily available online outside of the wiki, these can be particularly helpful for elements that are not self-explanatory.
+XML schemas are used to define and document elements. This project contains multiple schemas for different xml data structures in the game Star Wars™: Empire at War™. These should help new people to find their way around. As there is not much information easily available online outside of the wiki, these can be particularly helpful for elements that are not self-explanatory.
 
-## Usage
+## Installation
 
-At the root of your element, add the following attributes:
+There are two ways to add a schema to your xml files. The first is over XML Schema Instance attributes to add the following attributes at the root element of your document:
 
-```xml
-<root
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema"
-    xsi:schemaLocation="https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%
-    https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd">
-    ...
-</root>
+```toml
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd"
 ```
 
-Note: Replace `%SCHEMA%` with the name of the schema you need (see below for a selection).
+The second one is to use the XML Model association:
 
-## List of schemas
+```toml
+<?xml-model href="https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd"?>
+```
+
+That's it!
+
+## List of Schemas
 
 This is a list of all xml schemas that currently exist. More schemas will be added in the future.
 
-- [Ground](schemas/ground.xsd)
-- [Hardpoints](schemas/hardpoints.xsd)
-- [Planets](schemas/planets.xsd)
-- [Projectiles](schemas/projectiles.xsd)
-- [Space](schemas/space.xsd)
-- [Starbases](schemas/starbases.xsd)
-- [Trade Routes](schemas/trades.xsd)
-- [Upgrades](schemas/upgrades.xsd)
+- [`ground`](https://kiyotoko.github.io/eaw-xml-schema/schemas/ground.xsd)
+- [`hardpoints`](https://kiyotoko.github.io/eaw-xml-schema/schemas/hardpoints.xsd)
+- [`planets`](https://kiyotoko.github.io/eaw-xml-schema/schemas/planets.xsd)
+- [`projectiles`](https://kiyotoko.github.io/eaw-xml-schema/schemas/projectiles.xsd)
+- [`space`](https://kiyotoko.github.io/eaw-xml-schema/schemas/space.xsd)
+- [`starbases`](https://kiyotoko.github.io/eaw-xml-schema/schemas/starbases.xsd)
+- [`trades`](https://kiyotoko.github.io/eaw-xml-schema/schemas/trades.xsd)
+- [`upgrades`](https://kiyotoko.github.io/eaw-xml-schema/schemas/upgrades.xsd)
