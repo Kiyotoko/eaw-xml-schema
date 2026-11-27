@@ -1,0 +1,10 @@
+# build files
+bin/
+build/
+*.log
+
+# ide settings
+.vscode/
+
+# node.js
+node_modules/

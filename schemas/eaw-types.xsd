@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+  elementFormDefault="qualified"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+  vc:minVersion="1.1">
+  <xsd:simpleType name="YesNo">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\s*([Yy]es|[Nn]o|[Tt]rue|[Ff]alse)\s*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Color">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\s*(\d+)(,\s*\d+){3}\s*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Vector3">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\s*(\d+\s*){3}"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Identifier">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\s*[A-Za-z0-9_\-]*\s*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="Float">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\s*-?[0-9]+(\.[0-9]+f)?\s*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="IdentifierFloatTuple">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\s*[A-Za-z0-9_]*,\s*-?[0-9]+(\.[0-9]+)?f?\s*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="IdentifierIntTuple">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\s*[A-Za-z0-9_]*,\s*[0-9]+\s*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="IdentifierList">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\s*([A-Za-z0-9_\-]+(,\s*[A-Za-z0-9_\-]+)*)?,?\s*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="IdentifierMask">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\s*([A-Za-z0-9_\-]+(\s*\|\s*[A-Za-z0-9_\-]+)*)?\s*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="IdentifierSet">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\s*([A-Za-z0-9_\-]+(\s*[A-Za-z0-9_\-]+)*)?\s*"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TgaImage">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="([A-Za-z0-9_\-]*)\.tga"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="AloModel">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="(([A-Za-z0-9_\-]*)\.[Aa][Ll][Oo])?"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TecAnimation">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="(\s*([A-Za-z0-9_\-]*)\.[Tt][Ee][Cc]\s*)?"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType name="TxtFile">
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="([A-Za-z0-9_\-]*)\.txt"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

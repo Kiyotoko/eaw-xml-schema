@@ -1,54 +1,97 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:include schemaLocation="https://kiyotoko.github.io/eaw-xml-schema/schemas/eaw-types.xsd" />
   <xsd:element name="HardPoints">
     <xsd:complexType>
       <xsd:sequence>
         <xsd:element name="HardPoint" maxOccurs="unbounded" minOccurs="0">
           <xsd:complexType>
             <xsd:choice maxOccurs="unbounded" minOccurs="0">
-              <xsd:element type="xsd:string" name="Type"/>
-              <xsd:element type="xsd:string" name="Is_Targetable"/>
-              <xsd:element type="xsd:string" name="Is_Destroyable"/>
-              <xsd:element type="xsd:string" name="Tooltip_Text"/>
-              <xsd:element type="xsd:float" name="Health"/>
-              <xsd:element type="xsd:string" name="Death_Explosion_Particles"/>
-              <xsd:element type="xsd:string" name="Death_Explosion_SFXEvent"/>
-              <xsd:element type="xsd:string" name="Damage_Type"/>
-              <xsd:element type="xsd:string" name="Model_To_Attach"/>
-              <xsd:element type="xsd:string" name="Attachment_Bone"/>
-              <xsd:element type="xsd:string" name="Collision_Mesh"/>
-              <xsd:element type="xsd:string" name="Damage_Decal"/>
-              <xsd:element type="xsd:string" name="Damage_Particles"/>
-              <xsd:element type="xsd:string" name="Death_Breakoff_Prop"/>
-              <xsd:element type="xsd:string" name="Fire_Bone_A"/>
-              <xsd:element type="xsd:string" name="Fire_Bone_B"/>
-              <xsd:element type="xsd:float" name="Fire_Cone_Width"/>
-              <xsd:element type="xsd:float" name="Fire_Cone_Height"/>
-              <xsd:element type="xsd:string" name="Fire_Projectile_Type"/>
-              <xsd:element type="xsd:float" name="Fire_Min_Recharge_Seconds"/>
-              <xsd:element type="xsd:float" name="Fire_Max_Recharge_Seconds"/>
-              <xsd:element type="xsd:byte" name="Fire_Pulse_Count"/>
-              <xsd:element type="xsd:float" name="Fire_Pulse_Delay_Seconds"/>
-              <xsd:element type="xsd:float" name="Fire_Range_Distance"/>
-              <xsd:element type="xsd:string" name="Fire_SFXEvent"/>
-              <xsd:element type="xsd:string" name="Fire_Inaccuracy_Distance"/>
-              <xsd:element type="xsd:string" name="Engine_Particles"/>
-              <xsd:element type="xsd:float" name="Projectile_Damage"/>
-              <xsd:element type="xsd:string" name="Allow_Opportunity_Fire_When_Targeting"/>
-              <xsd:element type="xsd:string" name="Fire_Category_Restrictions"/>
-              <xsd:element type="xsd:float" name="Repair_Cost_Per_Frame"/>
-              <xsd:element type="xsd:float" name="Repair_Amount_Per_Frame"/>
-              <xsd:element type="xsd:float" name="Fighter_Bay_Flyout_Distance"/>
-              <xsd:element type="xsd:string" name="Special_Ability_Name"/>
-              <xsd:element type="xsd:string" name="Fire_Bone_C"/>
-              <xsd:element type="xsd:string" name="Fire_Bone_D"/>
-              <xsd:element type="xsd:string" name="Allow_Opportunity_Fire_When_Idle"/>
-              <xsd:element type="xsd:string" name="Fire_When_In_Rocket_Attack_Mode"/>
-              <xsd:element type="xsd:string" name="Fire_When_In_Normal_Attack_Mode"/>
-              <xsd:element type="xsd:string" name="Fire_When_Deployed"/>
-              <xsd:element type="xsd:string" name="Fire_When_Undeployed"/>
+              <xsd:element type="Identifier" name="Type">
+                <xsd:annotation>
+                  <xsd:documentation> The type of hard point, one of HARD_POINT_WEAPON_LASER,
+                    HARD_POINT_WEAPON_ION_CANNON, HARD_POINT_SHIELD_GENERATOR, HARD_POINT_ENGINE,
+                    HARD_POINT_FIGHTER_BAY, HARD_POINT_TRACTOR_BEAM, HARD_POINT_WEAPON_MISSILE. This
+                    list can be extended with your own types.
+                    
+                    Example: `HARD_POINT_WEAPON_LASER` </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="YesNo" name="Is_Targetable">
+                <xsd:annotation>
+                  <xsd:documentation> Example: Yes </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="YesNo" name="Is_Destroyable">
+                <xsd:annotation>
+                  <xsd:documentation> Example: Yes </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="Identifier" name="Tooltip_Text">
+                <xsd:annotation>
+                  <xsd:documentation> Example: TEXT_WEAPON_TURBOLASER </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:float" name="Health">
+                <xsd:annotation>
+                  <xsd:documentation> Example: 325.0 </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="Identifier" name="Death_Explosion_Particles">
+                <xsd:annotation>
+                  <xsd:documentation> Example: Large_Explosion_Space_Empire </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="Identifier" name="Death_Explosion_SFXEvent">
+                <xsd:annotation>
+                  <xsd:documentation> Example: Unit_Hardpoint_Turbo_Laser_Death </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="Identifier" name="Damage_Type">
+                <xsd:annotation>
+                  <xsd:documentation> Example: Damage_Star_Destroyer </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="AloModel" name="Model_To_Attach" />
+              <xsd:element type="Identifier" name="Attachment_Bone" />
+              <xsd:element type="Identifier" name="Collision_Mesh" />
+              <xsd:element type="Identifier" name="Damage_Decal" />
+              <xsd:element type="Identifier" name="Damage_Particles" />
+              <xsd:element type="Identifier" name="Death_Breakoff_Prop" />
+              <xsd:element type="Identifier" name="Fire_Bone_A" />
+              <xsd:element type="Identifier" name="Fire_Bone_B" />
+              <xsd:element type="xsd:float" name="Fire_Cone_Width" />
+              <xsd:element type="xsd:float" name="Fire_Cone_Height" />
+              <xsd:element type="Identifier" name="Fire_Projectile_Type" />
+              <xsd:element type="xsd:float" name="Fire_Min_Recharge_Seconds" />
+              <xsd:element type="xsd:float" name="Fire_Max_Recharge_Seconds" />
+              <xsd:element type="xsd:byte" name="Fire_Pulse_Count" />
+              <xsd:element type="xsd:float" name="Fire_Pulse_Delay_Seconds" />
+              <xsd:element type="xsd:float" name="Fire_Range_Distance" />
+              <xsd:element type="Identifier" name="Fire_SFXEvent" />
+              <xsd:element type="IdentifierFloatTuple" name="Fire_Inaccuracy_Distance" />
+              <xsd:element type="Identifier" name="Engine_Particles" />
+              <xsd:element type="xsd:float" name="Projectile_Damage" />
+              <xsd:element type="Identifier" name="Allow_Opportunity_Fire_When_Targeting" />
+              <xsd:element type="IdentifierList" name="Fire_Category_Restrictions" />
+              <xsd:element type="xsd:float" name="Repair_Cost_Per_Frame" />
+              <xsd:element type="xsd:float" name="Repair_Amount_Per_Frame" />
+              <xsd:element type="xsd:float" name="Fighter_Bay_Flyout_Distance" />
+              <xsd:element type="Identifier" name="Special_Ability_Name" />
+              <xsd:element type="Identifier" name="Fire_Bone_C" />
+              <xsd:element type="Identifier" name="Fire_Bone_D" />
+              <xsd:element type="Identifier" name="Allow_Opportunity_Fire_When_Idle" />
+              <xsd:element type="Identifier" name="Fire_When_In_Rocket_Attack_Mode" />
+              <xsd:element type="Identifier" name="Fire_When_In_Normal_Attack_Mode" />
+              <xsd:element type="Identifier" name="Fire_When_Deployed" />
+              <xsd:element type="Identifier" name="Fire_When_Undeployed" />
             </xsd:choice>
-            <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+            <xsd:attribute type="Identifier" name="Name">
+              <xsd:annotation>
+                <xsd:documentation> Example: HP_Star_Destroyer_Weapon_FL </xsd:documentation>
+              </xsd:annotation>
+            </xsd:attribute>
           </xsd:complexType>
         </xsd:element>
       </xsd:sequence>

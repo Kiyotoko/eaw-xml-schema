@@ -1,10 +1,9 @@
 ---
 name: XSD issue
 about: Describe issues related to the .xsd schema files.
-title: ''
+title: ""
 labels: xsd
 assignees: Kiyotoko
-
 ---
 
 **Related file**

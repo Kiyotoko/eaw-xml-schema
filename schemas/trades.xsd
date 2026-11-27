@@ -6,14 +6,61 @@
         <xsd:element name="TradeRoute" maxOccurs="unbounded" minOccurs="0">
           <xsd:complexType>
             <xsd:sequence>
-              <xsd:element type="xsd:string" name="Point_A"/>
-              <xsd:element type="xsd:string" name="Point_B"/>
-              <xsd:element type="xsd:float" name="HS_Speed_Factor"/>
-              <xsd:element type="xsd:byte" name="Political_Control_Gain"/>
+              <xsd:element type="xsd:string" name="Point_A">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Name of the first planet.
+
+                    Example: Geonosis
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:string" name="Point_B">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Name of the second planet.
+
+                    Example: Tatooine
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:float" name="HS_Speed_Factor">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    HS stands most likely for hyper speed. This is the speed factor your fleets gain when traveling on this trade root.
+
+                    Example: 5.0
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
+              <xsd:element type="xsd:float" name="Political_Control_Gain">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    This is most likely an unused feature from the game, as there is not really a political control feature inside the EaW. This value is generally set to 0.
+
+                    Example: 0.0
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
               <xsd:element type="xsd:float" name="Credit_Gain_Factor"/>
-              <xsd:element type="xsd:string" name="Visible_Line_Name" minOccurs="0"/>
+              <xsd:element type="xsd:string" name="Visible_Line_Name" minOccurs="0">
+                <xsd:annotation>
+                  <xsd:documentation>
+                    Name of the trade route, remove this element or set it to DEFAULT.
+                    Please note that you don't set the name directly, but instead the property name of the translation file entry.
+
+                    Example: Corellian_Trade_Route
+                  </xsd:documentation>
+                </xsd:annotation>
+              </xsd:element>
             </xsd:sequence>
-            <xsd:attribute type="xsd:string" name="Name" use="optional"/>
+            <xsd:attribute type="xsd:string" name="Name" use="optional">
+              <xsd:annotation>
+                <xsd:documentation>
+                  Name of this element, use this to reference it inside Lua scripts or XML.            
+                </xsd:documentation>
+              </xsd:annotation>
+            </xsd:attribute>
           </xsd:complexType>
         </xsd:element>
       </xsd:sequence>
