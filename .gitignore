@@ -1,0 +1,7 @@
+# build files
+bin/
+build/
+*.log
+
+# ide settings
+.vscode/

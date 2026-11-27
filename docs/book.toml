@@ -1,0 +1,10 @@
+[book]
+title = "EaW XML Schemas"
+description = "Validate your EaW xml mod files with schemas."
+authors = ["Karl Zschiebsch"]
+language = "en"
+
+[output.html]
+smart-punctuation = true
+git-repository-url = "https://github.com/Kiyotoko/eaw-xml-schema/tree/main"
+edit-url-template = "https://github.com/Kiyotoko/eaw-xml-schema/main/{path}"
