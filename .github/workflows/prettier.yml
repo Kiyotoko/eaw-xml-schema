@@ -1,0 +1,23 @@
+name: Prettier
+
+on:
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v4
+
+      - name: Format with Prettier
+        run: |
+          yarn
+          yarn prettier --write --log-level log -c docs/**/*.md
+          if git diff --cached --quiet; then
+            echo "Some files are unformatted."
+            exit 1
+          fi

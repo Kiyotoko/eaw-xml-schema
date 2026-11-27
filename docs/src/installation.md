@@ -20,7 +20,7 @@ That's it!
 
 > [!WARNING]
 > If you get the following error
-> 
+>
 > ```toml
 > Error while downloading
 > 'https://kiyotoko.github.io/eaw-xml-schema/schemas/trade.xsd'
@@ -28,11 +28,11 @@ That's it!
 >
 > this means that you have not entered the correct path to the schema. All letters must be lower case. Double check the full path or copy the link from one the of the schemas below.
 
-- <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/ground.xsd" target="_blank">ground</a>
-- <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/hardpoints.xsd" target="_blank">hardpoints</a>
--  <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/planets.xsd" target="_blank">planets</a>
-- <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/projectiles.xsd" target="_blank">projectiles</a>
-- <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/space.xsd" target="_blank">space</a> (requires XSD 1.1)
-- <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/starbases.xsd" target="_blank">starbases</a>
-- <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/trades.xsd" target="_blank">trades</a>
-- <a href="https://kiyotoko.github.io/eaw-xml-schema/schemas/upgrades.xsd" target="_blank">upgrades</a>
+- [`ground`](https://kiyotoko.github.io/eaw-xml-schema/schemas/ground.xsd)
+- [`hardpoints`](https://kiyotoko.github.io/eaw-xml-schema/schemas/hardpoints.xsd)
+- [`planets`](https://kiyotoko.github.io/eaw-xml-schema/schemas/planets.xsd)
+- [`projectiles`](https://kiyotoko.github.io/eaw-xml-schema/schemas/projectiles.xsd)
+- [`space`](https://kiyotoko.github.io/eaw-xml-schema/schemas/space.xsd)
+- [`starbases`](https://kiyotoko.github.io/eaw-xml-schema/schemas/starbases.xsd)
+- [`trades`](https://kiyotoko.github.io/eaw-xml-schema/schemas/trades.xsd)
+- [`upgrades`](https://kiyotoko.github.io/eaw-xml-schema/schemas/upgrades.xsd)
