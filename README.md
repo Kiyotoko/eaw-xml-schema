@@ -11,14 +11,14 @@ XML schemas are used to define and document elements. This project contains mult
 
 There are two ways to add a schema to your xml files. The first is over XML Schema Instance attributes to add the following attributes at the root element of your document:
 
-```toml
+```js
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd"
 ```
 
 The second one is to use the XML Model association:
 
-```toml
+```xml
 <?xml-model href="https://kiyotoko.github.io/eaw-xml-schema/schemas/%SCHEMA%.xsd"?>
 ```
 
